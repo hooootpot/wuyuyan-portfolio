@@ -1,4 +1,31 @@
 (() => {
+  const heroNoise = document.querySelector(".hero-noise");
+  if (heroNoise) {
+    heroNoise.insertAdjacentHTML("afterend", `
+      <figure class="hero-sketch-card" aria-hidden="true">
+        <img src="./portfolio/itch-mine.webp" alt="" />
+        <figcaption><span>ROOM_01 / MINE</span><span>AN IMAGINED WORLD →</span></figcaption>
+      </figure>
+      <div class="hero-scribbles" aria-hidden="true">
+        <span class="scribble-one">ideas hide here ↓</span>
+        <span class="scribble-two">draw · build · play</span>
+        <i>✷</i>
+      </div>
+    `);
+  }
+
+  const heroTitle = document.querySelector(".hero-title");
+  if (heroTitle) {
+    heroTitle.setAttribute("aria-label", "Visual storyteller with AI mind");
+    const outline = heroTitle.querySelector(".title-outline");
+    if (outline) outline.textContent = "STORYTELLER";
+  }
+
+  const contactTitle = document.querySelector(".contact-inner h2");
+  if (contactTitle) {
+    contactTitle.insertAdjacentHTML("beforebegin", '<p class="contact-handnote" aria-hidden="true">把想法画成<br />可以进入的世界 ↘</p>');
+  }
+
   const featuredProjects = [
     {
       index: "01",
