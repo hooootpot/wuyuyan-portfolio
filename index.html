@@ -1,0 +1,1038 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="吴宇艳的个人作品集：视觉设计、AI 创意、品牌系统与实时 3D 体验。" />
+    <meta name="theme-color" content="#080a09" />
+    <meta property="og:title" content="WU YUYAN — Visual / AI / Brand Designer" />
+    <meta property="og:description" content="视觉设计、AI 创意、品牌系统与实时 3D 体验。" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://hooootpot.github.io/wuyuyan-portfolio/og.webp" />
+    <link rel="icon" href="./favicon.png" />
+    <title>吴宇艳 — Visual / AI / Brand Designer</title>
+    <style>
+
+:root {
+  --ink: #080a09;
+  --panel: #0e1110;
+  --panel-2: #141715;
+  --paper: #f2f2eb;
+  --muted: #9a9d96;
+  --line: rgba(242, 242, 235, 0.15);
+  --acid: #d7ff3f;
+  --page: min(1700px, calc(100vw - 96px));
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--ink);
+}
+
+body {
+  margin: 0;
+  background: var(--ink);
+  color: var(--paper);
+  font-family: Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background: var(--acid);
+  color: var(--ink);
+}
+
+.site-shell {
+  background:
+    linear-gradient(90deg, transparent calc(50% - 1px), rgba(255,255,255,.025) 50%, transparent calc(50% + 1px)),
+    var(--ink);
+}
+
+.page-width {
+  width: var(--page);
+  margin: 0 auto;
+}
+
+.topbar {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 92px;
+  padding: 0 48px;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  border-bottom: 1px solid rgba(255,255,255,.14);
+  background: linear-gradient(180deg, rgba(5,7,6,.76), rgba(5,7,6,.14));
+  backdrop-filter: blur(12px);
+}
+
+.brand-mark {
+  justify-self: start;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 800;
+  letter-spacing: -.04em;
+  font-size: 19px;
+}
+
+.brand-mark i {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--acid);
+  box-shadow: 0 0 18px rgba(215,255,63,.7);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: clamp(28px, 3vw, 64px);
+  font: 11px/1.2 "Courier New", monospace;
+  letter-spacing: .12em;
+  color: rgba(255,255,255,.74);
+}
+
+.nav-links a {
+  position: relative;
+  padding: 12px 0;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 100%;
+  bottom: 4px;
+  height: 1px;
+  background: var(--acid);
+  transition: right .25s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a:focus-visible::after {
+  right: 0;
+}
+
+.contact-pill {
+  justify-self: end;
+  min-width: 158px;
+  height: 44px;
+  padding: 0 16px;
+  border: 1px solid rgba(255,255,255,.24);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  font: 10px/1 "Courier New", monospace;
+  letter-spacing: .08em;
+  transition: background .25s ease, color .25s ease, border-color .25s ease;
+}
+
+.contact-pill:hover,
+.contact-pill:focus-visible {
+  background: var(--acid);
+  border-color: var(--acid);
+  color: var(--ink);
+}
+
+.status-dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--acid);
+  box-shadow: 0 0 14px rgba(215,255,63,.65);
+}
+
+.contact-pill:hover .status-dot {
+  background: var(--ink);
+  box-shadow: none;
+}
+
+.hero {
+  min-height: 100svh;
+  height: max(760px, 100svh);
+  position: relative;
+  overflow: hidden;
+  background: #090b0a url("./portfolio/hero-frame.webp") center/cover no-repeat;
+}
+
+.hero-video,
+.hero-shade,
+.hero-noise {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-video {
+  object-fit: cover;
+  transform: scale(1.02);
+  filter: saturate(.88) contrast(1.04);
+}
+
+.hero-shade {
+  background:
+    linear-gradient(90deg, rgba(4,6,5,.88) 0%, rgba(4,6,5,.5) 38%, rgba(4,6,5,.16) 75%),
+    linear-gradient(180deg, rgba(2,3,2,.35), transparent 35%, rgba(2,3,2,.86) 100%);
+}
+
+.hero-noise {
+  opacity: .12;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.7'/%3E%3C/svg%3E");
+  mix-blend-mode: soft-light;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  padding-top: 154px;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-kicker {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font: 11px/1 "Courier New", monospace;
+  color: rgba(255,255,255,.68);
+  letter-spacing: .16em;
+}
+
+.kicker-line {
+  width: 46px;
+  height: 1px;
+  background: var(--acid);
+}
+
+.hero-title {
+  margin: clamp(58px, 9vh, 116px) 0 0;
+  display: flex;
+  flex-direction: column;
+  font-size: clamp(84px, 10.8vw, 196px);
+  font-weight: 800;
+  line-height: .72;
+  letter-spacing: -.075em;
+}
+
+.hero-title > span {
+  display: block;
+}
+
+.title-outline {
+  margin-left: 11vw;
+  color: transparent;
+  -webkit-text-stroke: 1.2px rgba(242,242,235,.82);
+}
+
+.hero-title .title-small {
+  margin: 34px 0 0 31vw;
+  color: var(--acid);
+  font: 600 clamp(18px, 2.1vw, 37px)/1 "Courier New", monospace;
+  letter-spacing: .03em;
+}
+
+.hero-lower {
+  margin-top: auto;
+  padding-bottom: 44px;
+  display: grid;
+  grid-template-columns: 1fr minmax(420px, 1.25fr) auto;
+  align-items: end;
+  gap: 48px;
+}
+
+.hero-coordinates {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  font: 10px/1.2 "Courier New", monospace;
+  letter-spacing: .12em;
+  color: rgba(255,255,255,.52);
+}
+
+.hero-intro {
+  margin: 0;
+  color: rgba(255,255,255,.72);
+  font-size: 14px;
+  line-height: 1.85;
+}
+
+.scroll-cue {
+  width: 142px;
+  height: 142px;
+  border: 1px solid rgba(255,255,255,.25);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  font: 9px/1 "Courier New", monospace;
+  letter-spacing: .08em;
+  transition: border-color .25s ease, background .25s ease, color .25s ease;
+}
+
+.scroll-cue i {
+  font-style: normal;
+  font-size: 22px;
+}
+
+.scroll-cue:hover,
+.scroll-cue:focus-visible {
+  border-color: var(--acid);
+  background: var(--acid);
+  color: var(--ink);
+}
+
+.hero-index {
+  position: absolute;
+  z-index: 3;
+  right: 22px;
+  top: 44%;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  transform: rotate(90deg) translateX(50%);
+  transform-origin: right center;
+  color: rgba(255,255,255,.42);
+  font: 9px/1 "Courier New", monospace;
+  letter-spacing: .18em;
+}
+
+.ticker {
+  height: 76px;
+  overflow: hidden;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: var(--acid);
+  color: var(--ink);
+}
+
+.ticker-track {
+  width: max-content;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 34px;
+  animation: ticker 28s linear infinite;
+  font: 800 20px/1 Arial, sans-serif;
+  letter-spacing: -.03em;
+}
+
+.ticker-track i {
+  font-style: normal;
+  font-size: 14px;
+}
+
+@keyframes ticker {
+  to { transform: translateX(-50%); }
+}
+
+.section-block {
+  padding: clamp(130px, 12vw, 220px) 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.section-head {
+  display: grid;
+  grid-template-columns: 1fr 2.2fr;
+  gap: 60px;
+  align-items: start;
+  margin-bottom: clamp(78px, 8vw, 142px);
+}
+
+.section-head > p {
+  margin: 10px 0 0;
+  font: 11px/1.2 "Courier New", monospace;
+  letter-spacing: .12em;
+  color: var(--muted);
+}
+
+.section-head > p span {
+  color: var(--acid);
+  margin-right: 12px;
+}
+
+.section-head h2 {
+  margin: 0;
+  max-width: 1000px;
+  font-size: clamp(42px, 5.2vw, 88px);
+  line-height: 1.07;
+  letter-spacing: -.055em;
+  font-weight: 600;
+}
+
+.about {
+  position: relative;
+  background:
+    radial-gradient(circle at 17% 32%, rgba(215,255,63,.05), transparent 28%),
+    var(--ink);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: minmax(420px, .82fr) 1.18fr;
+  gap: clamp(68px, 8vw, 150px);
+  align-items: center;
+}
+
+.portrait-frame {
+  position: relative;
+  margin: 0;
+  aspect-ratio: .88;
+  overflow: hidden;
+  background: #c8c9c3;
+}
+
+.portrait-frame::before,
+.portrait-frame::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  inset: 18px;
+  border: 1px solid rgba(255,255,255,.28);
+  pointer-events: none;
+}
+
+.portrait-frame::after {
+  inset: auto 18px 18px auto;
+  width: 13px;
+  height: 13px;
+  border-left: 0;
+  border-top: 0;
+  border-color: var(--acid);
+}
+
+.portrait-frame img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 34%;
+  transform: scale(1.16);
+  filter: grayscale(1) contrast(1.08) brightness(.88);
+}
+
+.portrait-glow {
+  position: absolute;
+  z-index: 1;
+  inset: auto -12% -20% 30%;
+  height: 55%;
+  background: var(--acid);
+  filter: blur(90px);
+  opacity: .28;
+  mix-blend-mode: color-dodge;
+}
+
+.portrait-frame figcaption {
+  position: absolute;
+  z-index: 3;
+  left: 28px;
+  right: 28px;
+  bottom: 25px;
+  display: flex;
+  justify-content: space-between;
+  color: rgba(255,255,255,.7);
+  font: 9px/1 "Courier New", monospace;
+  letter-spacing: .12em;
+}
+
+.about-copy {
+  padding: 10% 0;
+}
+
+.about-lead {
+  margin: 0 0 48px;
+  max-width: 940px;
+  font-size: clamp(30px, 3.25vw, 55px);
+  line-height: 1.28;
+  letter-spacing: -.04em;
+  color: var(--paper) !important;
+}
+
+.about-copy > p:not(.about-lead) {
+  max-width: 740px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 2;
+}
+
+.about-contact {
+  margin-top: 62px;
+  max-width: 740px;
+  border-top: 1px solid var(--line);
+}
+
+.about-contact a {
+  min-height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--line);
+  font: 12px/1 "Courier New", monospace;
+  letter-spacing: .05em;
+  transition: color .2s ease, padding .2s ease;
+}
+
+.about-contact a:hover,
+.about-contact a:focus-visible {
+  color: var(--acid);
+  padding-left: 8px;
+}
+
+.stats-grid {
+  margin-top: 120px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.stat {
+  min-height: 190px;
+  padding: 38px 28px;
+  border-right: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.stat:last-child { border-right: 0; }
+
+.stat strong {
+  color: var(--acid);
+  font-size: clamp(48px, 5vw, 82px);
+  line-height: 1;
+  letter-spacing: -.06em;
+}
+
+.stat span {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.timeline {
+  margin-top: 120px;
+  border-top: 1px solid var(--line);
+}
+
+.timeline-label {
+  padding: 24px 0 38px;
+  color: var(--muted);
+  font: 10px/1 "Courier New", monospace;
+  letter-spacing: .12em;
+}
+
+.timeline-row {
+  min-height: 126px;
+  padding: 28px 0;
+  display: grid;
+  grid-template-columns: 1fr 2.2fr .6fr;
+  gap: 60px;
+  align-items: center;
+  border-top: 1px solid var(--line);
+}
+
+.timeline-date,
+.timeline-row > span {
+  color: var(--muted);
+  font: 10px/1.2 "Courier New", monospace;
+  letter-spacing: .08em;
+}
+
+.timeline-row > span { text-align: right; }
+
+.timeline-row h3 {
+  margin: 0 0 10px;
+  font-size: 20px;
+  letter-spacing: -.02em;
+}
+
+.timeline-row p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.projects {
+  background: #0b0d0c;
+}
+
+.section-head-row {
+  grid-template-columns: 1fr 2.2fr .45fr;
+}
+
+.section-note {
+  justify-self: end;
+  margin-top: 10px;
+  color: var(--muted);
+  font: 9px/1 "Courier New", monospace;
+  letter-spacing: .1em;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: clamp(56px, 6vw, 110px) 32px;
+}
+
+.project-card {
+  grid-column: span 6;
+}
+
+.project-card:first-child {
+  grid-column: span 12;
+}
+
+.project-image-wrap {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  background: #161917;
+}
+
+.project-card:first-child .project-image-wrap {
+  aspect-ratio: 2 / 1;
+}
+
+.project-image-wrap > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .9s cubic-bezier(.2,.75,.2,1), filter .5s ease;
+}
+
+.project-card:hover .project-image-wrap > img {
+  transform: scale(1.035);
+  filter: brightness(.72) saturate(.85);
+}
+
+.project-index {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: rgba(7,9,8,.62);
+  border: 1px solid rgba(255,255,255,.24);
+  backdrop-filter: blur(10px);
+  font: 10px/1 "Courier New", monospace;
+}
+
+.project-hover {
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity .35s ease, transform .35s ease;
+  font: 10px/1 "Courier New", monospace;
+  letter-spacing: .12em;
+}
+
+.project-hover i {
+  width: 52px;
+  height: 52px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--acid);
+  color: var(--ink);
+  font-style: normal;
+  font-size: 18px;
+}
+
+.project-card:hover .project-hover {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.project-meta {
+  position: relative;
+  padding: 26px 0 0;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr auto;
+  gap: 36px;
+  align-items: start;
+}
+
+.project-card:not(:first-child) .project-meta {
+  grid-template-columns: 1fr auto;
+}
+
+.project-card:not(:first-child) .project-summary {
+  grid-column: 1 / -1;
+}
+
+.project-meta h3 {
+  margin: 0 0 9px;
+  font-size: clamp(21px, 2vw, 34px);
+  letter-spacing: -.035em;
+}
+
+.project-meta p {
+  margin: 0;
+}
+
+.project-meta > div p,
+.project-year {
+  color: var(--muted);
+  font: 9px/1.2 "Courier New", monospace;
+  letter-spacing: .08em;
+}
+
+.project-summary {
+  max-width: 520px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.75;
+}
+
+.project-year {
+  white-space: nowrap;
+  text-align: right;
+}
+
+.visual-note {
+  margin: 88px 0 0;
+  color: rgba(255,255,255,.36);
+  font-size: 11px;
+}
+
+.strengths {
+  background:
+    radial-gradient(circle at 70% 38%, rgba(215,255,63,.055), transparent 30%),
+    var(--ink);
+}
+
+.strength-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+
+.strength-card {
+  min-height: 470px;
+  padding: clamp(30px, 4vw, 64px);
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: background .35s ease, color .35s ease;
+}
+
+.strength-card:nth-child(2) {
+  background: var(--acid);
+  color: var(--ink);
+}
+
+.strength-card:not(:nth-child(2)):hover {
+  background: var(--panel-2);
+}
+
+.strength-top {
+  display: flex;
+  justify-content: space-between;
+  font: 10px/1 "Courier New", monospace;
+}
+
+.strength-top i { font-style: normal; font-size: 20px; }
+
+.strength-card h3 {
+  margin: 0;
+  font-size: clamp(31px, 3.2vw, 52px);
+  letter-spacing: -.055em;
+}
+
+.strength-card h4 {
+  margin: 12px 0 26px;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.strength-card p {
+  max-width: 520px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.85;
+}
+
+.strength-card:nth-child(2) p {
+  color: rgba(8,10,9,.7);
+}
+
+.strength-card ul {
+  margin: 42px 0 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.strength-card li {
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.strength-card:nth-child(2) li {
+  color: var(--ink);
+  border-color: rgba(8,10,9,.28);
+}
+
+.contact-screen {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 76% 36%, rgba(215,255,63,.17), transparent 24%),
+    linear-gradient(140deg, #0e110f, #050605 72%);
+}
+
+.contact-screen::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+  background-size: 7.5vw 7.5vw;
+  mask-image: linear-gradient(to bottom, transparent, black 20%, black 80%, transparent);
+}
+
+.contact-orbit {
+  position: absolute;
+  width: min(48vw, 760px);
+  aspect-ratio: 1;
+  right: -9vw;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 1px solid rgba(215,255,63,.24);
+  border-radius: 50%;
+  box-shadow: inset 0 0 120px rgba(215,255,63,.03);
+}
+
+.contact-orbit::before,
+.contact-orbit::after {
+  content: "";
+  position: absolute;
+  inset: 13%;
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 50%;
+}
+
+.contact-orbit::after {
+  inset: 35%;
+  background: var(--acid);
+  border: 0;
+  filter: blur(70px);
+  opacity: .12;
+}
+
+.contact-inner {
+  position: relative;
+  z-index: 2;
+  padding: 150px 0 42px;
+}
+
+.contact-kicker {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin: 0 0 clamp(60px, 8vh, 100px);
+  color: var(--muted);
+  font: 10px/1 "Courier New", monospace;
+  letter-spacing: .12em;
+}
+
+.contact-inner h2 {
+  margin: 0;
+  font-size: clamp(74px, 9.2vw, 164px);
+  line-height: .83;
+  letter-spacing: -.075em;
+  font-weight: 800;
+}
+
+.contact-inner h2 span { display: block; }
+
+.contact-inner h2 em {
+  color: var(--acid);
+  font-style: normal;
+}
+
+.contact-main {
+  width: min(100%, 660px);
+  margin-top: clamp(56px, 8vh, 92px);
+  padding: 0 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255,255,255,.42);
+  font: 11px/1 "Courier New", monospace;
+  letter-spacing: .12em;
+  transition: color .2s ease, border-color .2s ease;
+}
+
+.contact-main i {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--acid);
+  color: var(--ink);
+  font-size: 18px;
+  font-style: normal;
+  transition: transform .25s ease;
+}
+
+.contact-main:hover,
+.contact-main:focus-visible {
+  color: var(--acid);
+  border-color: var(--acid);
+}
+
+.contact-main:hover i { transform: rotate(45deg); }
+
+.contact-footer {
+  margin-top: clamp(88px, 13vh, 160px);
+  padding-top: 30px;
+  border-top: 1px solid var(--line);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr) auto;
+  gap: 50px;
+  align-items: end;
+}
+
+.contact-footer > div {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.contact-footer span {
+  color: var(--muted);
+  font: 9px/1 "Courier New", monospace;
+  letter-spacing: .12em;
+}
+
+.contact-footer a,
+.contact-footer p {
+  margin: 0;
+  font: 11px/1.2 "Courier New", monospace;
+}
+
+.contact-footer a:hover { color: var(--acid); }
+
+.back-top { white-space: nowrap; }
+
+@media (max-width: 1100px) {
+  :root { --page: min(1700px, calc(100vw - 48px)); }
+  .topbar { padding: 0 24px; }
+  .nav-links { display: none; }
+  .topbar { grid-template-columns: 1fr 1fr; }
+  .hero-title { font-size: clamp(68px, 13vw, 130px); }
+  .hero-lower { grid-template-columns: 1fr 2fr; }
+  .scroll-cue { display: none; }
+  .about-grid { grid-template-columns: .85fr 1.15fr; gap: 54px; }
+  .section-head-row { grid-template-columns: 1fr 2.2fr; }
+  .section-note { display: none; }
+  .project-meta { grid-template-columns: 1fr auto; }
+  .project-summary { grid-column: 1 / -1; }
+}
+
+@media (max-width: 760px) {
+  :root { --page: calc(100vw - 32px); }
+  .topbar { height: 72px; padding: 0 16px; }
+  .contact-pill { min-width: 138px; height: 40px; }
+  .hero { height: max(680px, 100svh); }
+  .hero-content { padding-top: 126px; }
+  .hero-kicker { font-size: 9px; }
+  .hero-title { margin-top: 90px; font-size: clamp(58px, 18vw, 92px); line-height: .78; }
+  .title-outline { margin-left: 0; }
+  .hero-title .title-small { margin: 25px 0 0 0; font-size: 16px; }
+  .hero-lower { grid-template-columns: 1fr; gap: 25px; }
+  .hero-coordinates { display: none; }
+  .hero-intro { font-size: 12px; }
+  .hero-index { display: none; }
+  .ticker { height: 58px; }
+  .ticker-track { font-size: 15px; }
+  .section-block { padding: 100px 0; }
+  .section-head,
+  .section-head-row { grid-template-columns: 1fr; gap: 30px; margin-bottom: 65px; }
+  .section-head h2 { font-size: 40px; }
+  .about-grid { grid-template-columns: 1fr; gap: 50px; }
+  .about-copy { padding: 0; }
+  .about-lead { font-size: 29px; }
+  .about-copy > p:not(.about-lead) { font-size: 13px; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); margin-top: 80px; }
+  .stat { min-height: 145px; border-bottom: 1px solid var(--line); }
+  .stat:nth-child(2) { border-right: 0; }
+  .timeline { margin-top: 80px; }
+  .timeline-row { grid-template-columns: 1fr; gap: 13px; min-height: auto; }
+  .timeline-row > span { text-align: left; }
+  .project-card,
+  .project-card:first-child { grid-column: span 12; }
+  .project-card:first-child .project-image-wrap { aspect-ratio: 4 / 3; }
+  .project-meta,
+  .project-card:not(:first-child) .project-meta { grid-template-columns: 1fr auto; gap: 18px; }
+  .project-summary { grid-column: 1 / -1; }
+  .strength-grid { grid-template-columns: 1fr; }
+  .strength-card { min-height: 410px; padding: 32px 26px; }
+  .contact-inner { padding-top: 120px; }
+  .contact-inner h2 { font-size: clamp(56px, 17vw, 92px); line-height: .9; }
+  .contact-footer { grid-template-columns: repeat(2, 1fr); }
+  .back-top { grid-column: 1 / -1; }
+  .contact-orbit { width: 90vw; right: -45vw; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .ticker-track { animation: none; }
+  .hero-video { display: none; }
+  *, *::before, *::after { transition-duration: .01ms !important; }
+}
+</style>
+  </head>
+  <body><link rel="preload" as="image" href="./portfolio/portrait.webp"/><link rel="preload" as="image" href="./portfolio/darkening.webp"/><link rel="preload" as="image" href="./portfolio/game-jam.webp"/><link rel="preload" as="image" href="./portfolio/mine.webp"/><div class="site-shell"><header class="topbar"><a class="brand-mark" href="#home" aria-label="返回首页"><span>WYY</span><i></i></a><nav class="nav-links" aria-label="主导航"><a href="#about">ABOUT</a><a href="#projects">PROJECTS</a><a href="#strengths">EXPERTISE</a></nav><a class="contact-pill" href="mailto:ywu044@gold.ac.uk"><span class="status-dot"></span>LET&#x27;S TALK<span aria-hidden="true">↗</span></a></header><main><section class="hero" id="home"><video class="hero-video" autoPlay="" muted="" loop="" playsInline="" poster="./portfolio/hero-frame.webp" aria-hidden="true"><source src="./portfolio/hero-loop.mp4" type="video/mp4"/></video><div class="hero-shade"></div><div class="hero-noise"></div><div class="hero-content page-width"><div class="hero-kicker"><span class="kicker-line"></span>VISUAL · AI · BRAND DESIGNER</div><h1 class="hero-title" aria-label="Visual designer with AI mind"><span>VISUAL</span><span class="title-outline">DESIGNER</span><span class="title-small">WITH AI MIND</span></h1><div class="hero-lower"><div class="hero-coordinates"><span>39.9042° N</span><span>116.4074° E</span></div><p class="hero-intro">我是吴宇艳，一名在视觉、品牌与实时体验之间工作的设计师。<br/>用敏锐的审美和快速迭代，把想法推进到清晰、可感知的结果。</p><a class="scroll-cue" href="#about"><span>SCROLL TO EXPLORE</span><i aria-hidden="true">↓</i></a></div></div><div class="hero-index" aria-hidden="true"><span>PORTFOLIO</span><span>2026 / 01</span></div></section><div class="ticker" aria-hidden="true"><div class="ticker-track"><span>VISUAL DESIGN</span><i>✦</i><span>AI CREATIVE</span><i>✦</i><span>BRAND SYSTEM</span><i>✦</i><span>REALTIME 3D</span><i>✦</i><span>VISUAL DESIGN</span><i>✦</i><span>AI CREATIVE</span><i>✦</i><span>BRAND SYSTEM</span><i>✦</i><span>REALTIME 3D</span><i>✦</i></div></div><section class="about section-block" id="about"><div class="page-width"><div class="section-head"><p><span>01</span> ABOUT / 关于我</p><h2>跨越视觉、技术与真实场景的<br/>复合型设计实践。</h2></div><div class="about-grid"><figure class="portrait-frame"><div class="portrait-glow"></div><img src="./portfolio/portrait.webp" alt="视觉设计师吴宇艳"/><figcaption><span>WUYUYAN.JPG</span><span>BEIJING · CN</span></figcaption></figure><div class="about-copy"><p class="about-lead">我相信好的视觉不只需要“好看”，还要能解释问题、建立感受，并最终被真实地使用。</p><p>北京林业大学数字媒体艺术学士，伦敦大学金史密斯学院游戏设计与艺术硕士。 我的经验横跨品牌与平面、空间美陈、游戏美术、实时引擎和交互原型，能够在约束中快速找到有力的视觉解法。</p><div class="about-contact"><a href="mailto:ywu044@gold.ac.uk">ywu044@gold.ac.uk <span>↗</span></a><a href="tel:+8613371778515">+86 133 7177 8515 <span>↗</span></a></div></div></div><div class="stats-grid"><div class="stat"><strong>300+</strong><span>游戏体验样本</span></div><div class="stat"><strong>04+</strong><span>完整项目经验</span></div><div class="stat"><strong>10+</strong><span>设计与三维工具</span></div><div class="stat"><strong>48H</strong><span>Game Jam 交付</span></div></div><div class="timeline"><div class="timeline-label">EXPERIENCE / 经历</div><article class="timeline-row"><div class="timeline-date">2025.06 — NOW</div><div><h3>北京唐顿美景科技有限公司</h3><p>设计师 · 调研策略 / 视觉方案 / 空间美陈 / 落地统筹</p></div><span>BEIJING</span></article><article class="timeline-row"><div class="timeline-date">2023 — 2024</div><div><h3>Goldsmiths, University of London</h3><p>MA Game Design &amp; Art · 游戏设计与艺术硕士</p></div><span>LONDON</span></article><article class="timeline-row"><div class="timeline-date">2019 — 2023</div><div><h3>北京林业大学</h3><p>BA Digital Media Art · 数字媒体艺术学士</p></div><span>BEIJING</span></article></div></div></section><section class="projects section-block" id="projects"><div class="page-width"><div class="section-head section-head-row"><p><span>02</span> SELECTED WORK / 精选项目</p><h2>项目不是陈列品，<br/>而是一段被设计过的体验。</h2><div class="section-note">SELECTED 03 / 04</div></div><div class="projects-grid"><article class="project-card"><div class="project-image-wrap"><img src="./portfolio/darkening.webp" alt="Darkening 项目的暗色建筑与悬浮矿石概念视觉"/><div class="project-hover"><span>VIEW CASE</span><i>↗</i></div><span class="project-index">01</span></div><div class="project-meta"><div><h3>DARKENING / 变暗</h3><p>3D ART · ANIMATION · UI · AR</p></div><p class="project-summary">面向 AR 场景的五人协作项目。参与玩法策划，并以 Maya、Substance Painter 与 ZBrush 完成 3D 模型、动画及 UI 动效。</p><span class="project-year">2024</span></div></article><article class="project-card"><div class="project-image-wrap"><img src="./portfolio/game-jam.webp" alt="Global Game Jam 项目的纸艺风格 2D 游戏世界概念视觉"/><div class="project-hover"><span>VIEW CASE</span><i>↗</i></div><span class="project-index">02</span></div><div class="project-meta"><div><h3>GLOBAL GAME JAM</h3><p>2D ART · ANIMATION · LEVEL DESIGN</p></div><p class="project-summary">三人团队在 48 小时内完成可玩原型，负责第二关全部视觉资产、UI、动画与关卡节奏。</p><span class="project-year">48H / 2024</span></div></article><article class="project-card"><div class="project-image-wrap"><img src="./portfolio/mine.webp" alt="Mine 项目的矿洞与收藏品解谜世界概念视觉"/><div class="project-hover"><span>VIEW CASE</span><i>↗</i></div><span class="project-index">03</span></div><div class="project-meta"><div><h3>MINE / 我的</h3><p>DESIGN · ART · C# DEVELOPMENT</p></div><p class="project-summary">从玩法机制到美术与程序独立完成，以收集、切换和背包系统构建一段安静的 2D 解谜体验。</p><span class="project-year">2024</span></div></article></div><p class="visual-note">* 当前项目封面为首版视觉方向图，后续可替换为你的真实项目截图与案例详情。</p></div></section><section class="strengths section-block" id="strengths"><div class="page-width"><div class="section-head"><p><span>03</span> EXPERTISE / 个人优势</p><h2>在审美与系统之间，<br/>找到更聪明的表达路径。</h2></div><div class="strength-grid"><article class="strength-card"><div class="strength-top"><span>01</span><i>↗</i></div><div><h3>VISUAL SYSTEM</h3><h4>视觉系统构建</h4><p>从概念、色彩与版式出发，把模糊需求转化成统一、可延展的视觉语言。</p></div><ul><li>品牌视觉</li><li>动态设计</li><li>UI / UX</li></ul></article><article class="strength-card"><div class="strength-top"><span>02</span><i>↗</i></div><div><h3>AI × DESIGN</h3><h4>AI 共创与迭代</h4><p>将生成式工具嵌入研究、发散和验证环节，快速探索方向，同时保留设计判断。</p></div><ul><li>概念生成</li><li>工作流设计</li><li>快速原型</li></ul></article><article class="strength-card"><div class="strength-top"><span>03</span><i>↗</i></div><div><h3>REALTIME 3D</h3><h4>实时视觉与三维</h4><p>熟悉 Unity、UE、Maya 与 SP，从模型动画到实时场景完成跨媒介表达。</p></div><ul><li>Unity / UE</li><li>Maya / SP</li><li>动画</li></ul></article><article class="strength-card"><div class="strength-top"><span>04</span><i>↗</i></div><div><h3>0 → 1 DELIVERY</h3><h4>从策略到落地</h4><p>覆盖前期调研、创意提案、视觉深化与供应商协作，让设计在真实场景中成立。</p></div><ul><li>策略研究</li><li>跨团队协作</li><li>落地统筹</li></ul></article></div></div></section><section class="contact-screen" id="contact"><div class="contact-orbit" aria-hidden="true"></div><div class="page-width contact-inner"><p class="contact-kicker"><span class="status-dot"></span> AVAILABLE FOR SELECTED PROJECTS</p><h2>HAVE A PROJECT?<span>LET&#x27;S MAKE IT <em>VISIBLE.</em></span></h2><a class="contact-main" href="mailto:ywu044@gold.ac.uk"><span>START A CONVERSATION</span><i>↗</i></a><div class="contact-footer"><div><span>EMAIL</span><a href="mailto:ywu044@gold.ac.uk">YWU044@GOLD.AC.UK</a></div><div><span>PHONE</span><a href="tel:+8613371778515">+86 133 7177 8515</a></div><div><span>BASE</span><p>BEIJING · CHINA</p></div><a class="back-top" href="#home">BACK TO TOP ↑</a></div></div></section></main></div></body>
+</html>
