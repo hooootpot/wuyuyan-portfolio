@@ -1614,6 +1614,63 @@ body::before {
   transform: rotate(-2deg) translateY(-2px);
 }
 
+.top-actions {
+  justify-self: end;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.top-actions .contact-pill {
+  justify-self: auto;
+}
+
+.language-toggle {
+  height: 40px;
+  padding: 3px;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  border: 2px solid var(--ink);
+  border-radius: 13px 9px 15px 10px;
+  background: #fff5df;
+  box-shadow: 3px 3px 0 var(--ink);
+  transform: rotate(-1deg);
+}
+
+.language-toggle button {
+  min-width: 42px;
+  height: 30px;
+  padding: 0 8px;
+  border: 0;
+  border-radius: 9px 6px 10px 7px;
+  color: var(--ink);
+  background: transparent;
+  cursor: pointer;
+  font: 800 10px/1 "Arial Rounded MT Bold", "PingFang SC", sans-serif;
+  transition: background .2s ease, color .2s ease, transform .2s ease;
+}
+
+.language-toggle button:hover,
+.language-toggle button:focus-visible {
+  background: rgba(104,206,211,.45);
+}
+
+.language-toggle button.is-active {
+  color: #fff8e8;
+  background: var(--mine-pink);
+  box-shadow: 2px 2px 0 var(--ink);
+  transform: rotate(2deg);
+}
+
+html[data-language="en"] .hero-title {
+  font-size: clamp(72px, 8.7vw, 158px);
+}
+
+html[data-language="en"] .experience-card-head h3 {
+  font-size: clamp(27px, 2.8vw, 48px);
+}
+
 .hero {
   min-height: 850px;
   height: max(850px, 100svh);
@@ -2780,10 +2837,15 @@ a.archive-card:focus-visible {
   }
 
   .contact-pill { min-width: 132px; height: 36px; }
+  .top-actions { gap: 7px; }
+  .contact-pill { min-width: 112px; padding: 0 10px; font-size: 8px; }
+  .language-toggle { height: 36px; padding: 2px; box-shadow: 2px 2px 0 var(--ink); }
+  .language-toggle button { min-width: 34px; height: 28px; padding: 0 6px; font-size: 9px; }
   .hero { min-height: 880px; height: 880px; }
   .hero-content { padding-top: 100px; }
   .hero-kicker { font-size: 8px; }
   .hero-title { width: 100%; margin-top: 48px; font-size: clamp(56px, 16vw, 82px); }
+  html[data-language="en"] .hero-title { font-size: clamp(50px, 13.5vw, 72px); }
   .title-outline { margin-left: 0; -webkit-text-stroke-width: 2px; }
   .hero-title .title-small { margin-left: 3vw; font-size: 15px; }
   .hero-sketch-card { top: 355px; right: auto; left: 5%; width: 90%; padding: 8px 8px 0; box-shadow: 8px 9px 0 var(--mine-pink), 11px 12px 0 var(--ink); }
