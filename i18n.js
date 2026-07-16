@@ -353,6 +353,9 @@
     renderLanguage(language);
   }
 
-  if (document.readyState === "complete") init();
-  else window.addEventListener("load", init, { once: true });
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init, { once: true });
+  } else {
+    init();
+  }
 })();
