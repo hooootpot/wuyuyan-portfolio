@@ -26,6 +26,114 @@
     contactTitle.insertAdjacentHTML("beforebegin", '<p class="contact-handnote" aria-hidden="true">把想法画成<br />可以进入的世界 ↘</p>');
   }
 
+  const nav = document.querySelector(".nav-links");
+  if (nav) {
+    nav.innerHTML = `
+      <a href="#about">ABOUT</a>
+      <a href="#experience">WORK</a>
+      <a href="#education">EDUCATION</a>
+      <a href="#projects">PROJECTS</a>
+    `;
+  }
+
+  const aboutSection = document.querySelector(".about");
+  const oldTimeline = aboutSection?.querySelector(".timeline");
+  if (oldTimeline) oldTimeline.remove();
+
+  if (aboutSection) {
+    aboutSection.insertAdjacentHTML("afterend", `
+      <section class="experience-section work-section section-block" id="experience">
+        <div class="page-width">
+          <div class="section-head experience-title">
+            <p><span>02</span> WORK EXPERIENCE / 工作经历</p>
+            <h2>从调研与策略开始，<br />把设计推进到真实场景。</h2>
+          </div>
+          <article class="work-card experience-card">
+            <header class="experience-card-head">
+              <div>
+                <span class="experience-eyebrow">PROFESSIONAL ROLE / 工作职位</span>
+                <h3>北京唐顿美景科技有限公司</h3>
+                <p>TANGDUN LANDSCAPE TECHNOLOGY</p>
+              </div>
+              <div class="experience-period">
+                <strong>2025.06 — 2026.06</strong>
+                <span>1年</span>
+              </div>
+            </header>
+            <div class="work-overview">
+              <div class="work-role-note">
+                <span>ROLE / 职位</span>
+                <strong>设计师</strong>
+                <p>空间美陈 · 视觉系统 · 项目策略 · 落地统筹</p>
+                <small>北京 · CHINA</small>
+              </div>
+              <div class="work-responsibilities">
+                <div class="detail-label">RESPONSIBILITIES / 具体工作内容</div>
+                <ol>
+                  <li><span>01</span><p>开展场地勘察、需求分析和前期资料收集，为项目从 0 到 1 建立策略与设计方向。</p></li>
+                  <li><span>02</span><p>独立完成创意构思、概念提案、视觉呈现和多轮方案深化，确保设计与项目定位一致。</p></li>
+                  <li><span>03</span><p>负责导视系统、宣传物料、室内外绿植配置与场景美陈方案的设计和呈现。</p></li>
+                  <li><span>04</span><p>协调内部团队、外包团队与供应商推进项目落地，控制执行品质与沟通节奏。</p></li>
+                  <li><span>05</span><p>完成供应商寻源、报价比对与现场考察，根据施工条件和实际反馈及时优化方案。</p></li>
+                </ol>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="experience-section education-section section-block" id="education">
+        <div class="page-width">
+          <div class="section-head experience-title">
+            <p><span>03</span> EDUCATION / 学习经历</p>
+            <h2>从数字媒体艺术，<br />走向游戏与沉浸式体验。</h2>
+          </div>
+          <div class="education-grid">
+            <article class="education-card experience-card">
+              <header>
+                <span class="education-index">01</span>
+                <div class="education-period"><strong>2023.10 — 2024.09</strong><span>1年</span></div>
+              </header>
+              <div class="education-school">
+                <span>伦敦 · 英国</span>
+                <h3>伦敦大学金史密斯学院</h3>
+                <p>Goldsmiths, University of London</p>
+                <strong>游戏设计与艺术 · 硕士</strong>
+              </div>
+              <div class="education-research">
+                <div class="detail-label">RESEARCH DIRECTION / 研究方向</div>
+                <p>以游戏设计与艺术为核心，研究实时引擎中的视觉开发、交互机制、3D 内容与沉浸式体验。</p>
+                <ul><li>游戏设计与分析</li><li>视觉游戏开发</li><li>3D 建模与动画</li><li>增强现实</li><li>UE4 音频体验</li><li>UE5 游戏开发</li></ul>
+              </div>
+            </article>
+            <article class="education-card experience-card">
+              <header>
+                <span class="education-index">02</span>
+                <div class="education-period"><strong>2019.09 — 2023.06</strong><span>3年10个月</span></div>
+              </header>
+              <div class="education-school">
+                <span>北京 · 中国</span>
+                <h3>北京林业大学</h3>
+                <p>Beijing Forest University</p>
+                <strong>数字媒体艺术 · 学士</strong>
+              </div>
+              <div class="education-research">
+                <div class="detail-label">RESEARCH DIRECTION / 研究方向</div>
+                <p>围绕数字媒体艺术建立视觉与交互基础，覆盖用户体验、游戏设计、动态图形和前端技术。</p>
+                <ul><li>用户体验设计</li><li>交互设计</li><li>游戏设计与美术</li><li>前端技术开发</li><li>动态图形设计</li><li>互动绘本与游戏引擎</li></ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    `);
+  }
+
+  const projectSectionNumber = document.querySelector(".projects .section-head > p span");
+  if (projectSectionNumber) projectSectionNumber.textContent = "04";
+  const strengthsSectionNumber = document.querySelector(".strengths .section-head > p span");
+  if (strengthsSectionNumber) strengthsSectionNumber.textContent = "05";
+
   const featuredProjects = [
     {
       index: "01",
