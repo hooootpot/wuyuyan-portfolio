@@ -1,7 +1,7 @@
 (() => {
   const copy = {
     zh: {
-      nav: ["关于", "工作经历", "学习经历", "项目作品"],
+      nav: ["关于", "工作", "学习", "项目", "优势"],
       contactCta: "联系我",
       heroKicker: "视觉设计 · AI 创意 · 品牌设计",
       heroTitle: ["视觉", "叙事设计师", "AI 共创"],
@@ -98,7 +98,7 @@
       backTop: "返回顶部 ↑"
     },
     en: {
-      nav: ["ABOUT", "WORK", "EDUCATION", "PROJECTS"],
+      nav: ["ABOUT", "WORK", "EDUCATION", "PROJECTS", "EXPERTISE"],
       contactCta: "LET'S TALK",
       heroKicker: "VISUAL · AI · BRAND DESIGNER",
       heroTitle: ["VISUAL", "STORYTELLER", "WITH AI MIND"],
@@ -217,7 +217,7 @@
     document.documentElement.lang = language === "zh" ? "zh-CN" : "en";
     document.documentElement.dataset.language = language;
 
-    setTexts(".nav-links a", c.nav);
+    setTexts(".nav-links .nav-label", c.nav);
     setHtml(".contact-pill", `<span class="status-dot"></span>${c.contactCta}<span aria-hidden="true">↗</span>`);
     setHtml(".hero-kicker", `<span class="kicker-line"></span>${c.heroKicker}`);
     setTexts(".hero-title > span", c.heroTitle);
@@ -343,8 +343,42 @@
     });
   }
 
+  function mountNavigationTracking() {
+    const links = qa('.nav-links a[href^="#"]');
+    if (!links.length) return;
+
+    const setCurrent = (id) => {
+      links.forEach((link) => {
+        const active = link.getAttribute("href") === `#${id}`;
+        link.classList.toggle("is-current", active);
+        if (active) link.setAttribute("aria-current", "location");
+        else link.removeAttribute("aria-current");
+      });
+    };
+
+    const brand = q('.brand-mark[href="#home"]');
+    if (brand) brand.addEventListener("click", () => setCurrent("home"));
+    links.forEach((link) => {
+      link.addEventListener("click", () => setCurrent(link.getAttribute("href").slice(1)));
+    });
+
+    if (!("IntersectionObserver" in window)) return;
+    const observer = new IntersectionObserver((entries) => {
+      const visible = entries
+        .filter((entry) => entry.isIntersecting)
+        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+      if (visible) setCurrent(visible.target.id);
+    }, { rootMargin: "-18% 0px -62% 0px", threshold: [0, .15, .4] });
+
+    links.forEach((link) => {
+      const section = q(link.getAttribute("href"));
+      if (section) observer.observe(section);
+    });
+  }
+
   function init() {
     mountToggle();
+    mountNavigationTracking();
     let language = "zh";
     try {
       const saved = localStorage.getItem("portfolio-language");

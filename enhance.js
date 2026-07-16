@@ -29,10 +29,11 @@
   const nav = document.querySelector(".nav-links");
   if (nav) {
     nav.innerHTML = `
-      <a href="#about">ABOUT</a>
-      <a href="#experience">WORK</a>
-      <a href="#education">EDUCATION</a>
-      <a href="#projects">PROJECTS</a>
+      <a href="#about"><span class="nav-index">01</span><span class="nav-label">ABOUT</span></a>
+      <a href="#experience"><span class="nav-index">02</span><span class="nav-label">WORK</span></a>
+      <a href="#education"><span class="nav-index">03</span><span class="nav-label">EDUCATION</span></a>
+      <a href="#projects"><span class="nav-index">04</span><span class="nav-label">PROJECTS</span></a>
+      <a href="#strengths"><span class="nav-index">05</span><span class="nav-label">EXPERTISE</span></a>
     `;
   }
 
