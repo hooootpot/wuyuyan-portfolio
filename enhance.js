@@ -16,9 +16,9 @@
 
   const heroTitle = document.querySelector(".hero-title");
   if (heroTitle) {
-    heroTitle.setAttribute("aria-label", "Visual storyteller with AI mind");
+    heroTitle.setAttribute("aria-label", "Game designer with a visual mind");
     const outline = heroTitle.querySelector(".title-outline");
-    if (outline) outline.textContent = "STORYTELLER";
+    if (outline) outline.textContent = "DESIGNER";
   }
 
   const contactTitle = document.querySelector(".contact-inner h2");

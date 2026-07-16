@@ -1,10 +1,12 @@
 (() => {
   const copy = {
     zh: {
+      documentTitle: "吴宇艳 — 游戏设计师 / Game Designer",
       nav: ["关于", "工作", "学习", "项目", "优势"],
       contactCta: "联系我",
-      heroKicker: "视觉设计 · AI 创意 · 品牌设计",
-      heroTitle: ["视觉", "叙事设计师", "AI 共创"],
+      heroKicker: "游戏设计 · 视觉美术 · AI 创意",
+      heroTitle: ["游戏", "设计师", "视觉 · AI · 叙事"],
+      heroAria: "游戏设计师吴宇艳",
       heroCaption: ["房间_01 / 我的", "一个想象中的世界 →"],
       scribbles: ["灵感藏在这里 ↓", "绘制 · 构建 · 玩耍"],
       heroIntro: "我是吴宇艳，一名在视觉、品牌与实时体验之间工作的设计师。<br />用敏锐的审美和快速迭代，把想法推进到清晰、可感知的结果。",
@@ -98,10 +100,12 @@
       backTop: "返回顶部 ↑"
     },
     en: {
+      documentTitle: "WU YUYAN — Game Designer",
       nav: ["ABOUT", "WORK", "EDUCATION", "PROJECTS", "EXPERTISE"],
       contactCta: "LET'S TALK",
-      heroKicker: "VISUAL · AI · BRAND DESIGNER",
-      heroTitle: ["VISUAL", "STORYTELLER", "WITH AI MIND"],
+      heroKicker: "GAME · VISUAL · AI DESIGNER",
+      heroTitle: ["GAME", "DESIGNER", "VISUAL · AI · STORY"],
+      heroAria: "Wu Yuyan, game designer",
       heroCaption: ["ROOM_01 / MINE", "AN IMAGINED WORLD →"],
       scribbles: ["ideas hide here ↓", "draw · build · play"],
       heroIntro: "I’m Wu Yuyan, a designer working across visual identity, brands and real-time experiences.<br />I turn ideas into clear, tangible outcomes through sharp aesthetics and rapid iteration.",
@@ -216,11 +220,14 @@
     const c = copy[language];
     document.documentElement.lang = language === "zh" ? "zh-CN" : "en";
     document.documentElement.dataset.language = language;
+    document.title = c.documentTitle;
 
     setTexts(".nav-links .nav-label", c.nav);
     setHtml(".contact-pill", `<span class="status-dot"></span>${c.contactCta}<span aria-hidden="true">↗</span>`);
     setHtml(".hero-kicker", `<span class="kicker-line"></span>${c.heroKicker}`);
     setTexts(".hero-title > span", c.heroTitle);
+    const heroTitle = q(".hero-title");
+    if (heroTitle) heroTitle.setAttribute("aria-label", c.heroAria);
     setTexts(".hero-sketch-card figcaption span", c.heroCaption);
     setText(".scribble-one", c.scribbles[0]);
     setText(".scribble-two", c.scribbles[1]);
