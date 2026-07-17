@@ -3832,3 +3832,27 @@ section[id] {
     font-size: 7px;
   }
 }
+
+/* Unified 20px responsive safe area — final layout rule ---------------- */
+:root {
+  --page: min(1700px, calc(100vw - 40px));
+}
+
+.page-width {
+  width: var(--page);
+  max-width: 1700px;
+}
+
+.topbar {
+  width: min(1700px, calc(100% - 40px));
+}
+
+@media (max-width: 1100px) {
+  :root { --page: calc(100vw - 40px); }
+  .topbar { width: calc(100% - 40px); }
+}
+
+@media (max-width: 760px) {
+  :root { --page: calc(100vw - 40px); }
+  .topbar { width: calc(100% - 40px); }
+}
