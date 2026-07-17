@@ -4,22 +4,22 @@
       documentTitle: "吴宇艳 — 游戏设计师 / Game Designer",
       nav: ["关于", "工作", "学习", "项目", "优势"],
       contactCta: "联系我",
-      heroKicker: "游戏设计 · 视觉美术 · AI 创意",
-      heroTitle: ["游戏", "设计师", "视觉 · AI · 叙事"],
+      heroKicker: "游戏设计 · 视觉美术 · 交互叙事",
+      heroTitle: ["游戏", "设计师", ""],
       heroAria: "游戏设计师吴宇艳",
-      heroCaption: ["房间_01 / 我的", "一个想象中的世界 →"],
+      heroCaption: ["吴宇艳", "游戏设计师 →"],
       scribbles: ["灵感藏在这里 ↓", "绘制 · 构建 · 玩耍"],
-      heroIntro: "我是吴宇艳，一名在视觉、品牌与实时体验之间工作的设计师。<br />用敏锐的审美和快速迭代，把想法推进到清晰、可感知的结果。",
+      heroIntro: "我是吴宇艳，一名在游戏机制、视觉美术与实时体验之间工作的游戏设计师。<br />用叙事、交互和快速原型，把想法推进为清晰、可玩的体验。",
       scroll: "向下探索",
       heroIndex: ["作品集", "2026 / 01"],
-      ticker: ["视觉设计", "AI 创意", "品牌系统", "实时三维"],
-      aboutLabel: '<span>01</span> 关于我',
+      ticker: ["游戏设计", "游戏美术", "交互叙事", "实时三维"],
+      aboutLabel: "<span>01</span> 关于我",
       aboutTitle: "跨越视觉、技术与真实场景的<br />复合型设计实践。",
       portraitCaption: ["吴宇艳.照片", "北京 · 中国"],
       aboutLead: "我相信好的视觉不只需要“好看”，还要能解释问题、建立感受，并最终被真实地使用。",
       aboutBody: "北京林业大学数字媒体艺术学士，伦敦大学金史密斯学院游戏设计与艺术硕士。我的经验横跨品牌与平面、空间美陈、游戏美术、实时引擎和交互原型，能够在约束中快速找到有力的视觉解法。",
       stats: ["游戏体验样本", "公开游戏项目", "设计与三维工具", "大赛限时交付"],
-      workLabel: '<span>02</span> 工作经历',
+      workLabel: "<span>02</span> 工作经历",
       workTitle: "从调研与策略开始，<br />把设计推进到真实场景。",
       workEyebrow: "工作职位",
       workCompany: "北京唐顿美景科技有限公司",
@@ -37,7 +37,7 @@
         "协调内部团队、外包团队与供应商推进项目落地，控制执行品质与沟通节奏。",
         "完成供应商寻源、报价比对与现场考察，根据施工条件和实际反馈及时优化方案。"
       ],
-      educationLabel: '<span>03</span> 学习经历',
+      educationLabel: "<span>03</span> 学习经历",
       educationTitle: "从数字媒体艺术，<br />走向游戏与沉浸式体验。",
       education: [
         {
@@ -59,7 +59,7 @@
           topics: ["用户体验设计", "交互设计", "游戏设计与美术", "前端技术开发", "动态图形设计", "互动绘本与游戏引擎"]
         }
       ],
-      projectsLabel: '<span>04</span> 精选项目',
+      projectsLabel: "<span>04</span> 精选项目",
       projectsTitle: "项目不是陈列品，<br />而是一段被设计过的体验。",
       projectsNote: "精选 03 / 共 08",
       projectTitles: ["我的 / MINE", "OH! / 平台搭建", "钓鱼 / 3D 练习"],
@@ -70,9 +70,9 @@
         "在 Maya 中完成人物与场景建模及材质制作，将资产导入 Unity，并设计站立、坐下与钓鱼交互。"
       ],
       projectHover: "在 ITCH.IO 查看",
-      sourceNote: "* 项目资料与图片来自本人公开项目页，点击卡片可查看、试玩或下载。",
-      profileLink: "查看 ITCH.IO 主页 <span>↗</span>",
-      archiveLabel: '<span>05</span> 更多项目 / 完整列表',
+      sourceNote: "* 项目资料与图片来自本人 itch.io 公开项目页，点击卡片可查看、试玩或下载。",
+      profileLink: "查看 ITCH.IO 主页",
+      archiveLabel: "<span>05</span> 更多项目 / 完整列表",
       archiveCount: "全部作品 08 / 08",
       archiveMeta: ["UE5 · 动作角色扮演", "UE4 · 动作原型", "全球游戏创作大赛 · 解谜", "全球游戏创作大赛 2022 · 2D 平台", "3D 美术 · 增强现实 · 界面"],
       archiveTitles: ["AI 战斗演示 2.0", "AI 战斗演示", "GIE-GIE-GIE", "RIFTCROSSER", "变暗 / DARKENING"],
@@ -83,11 +83,11 @@
         "围绕双手控制与场景切换设计的 2D 平台游戏，于 2022 年全球游戏创作大赛完成。",
         "面向增强现实场景的五人协作项目；参与玩法策划，并完成 3D 模型、动画、材质及界面动效。"
       ],
-      strengthsLabel: '<span>05</span> 个人优势',
+      strengthsLabel: "<span>05</span> 个人优势",
       strengthsTitle: "在审美与系统之间，<br />找到更聪明的表达路径。",
       strengths: [
         { title: "视觉系统", subtitle: "视觉系统构建", text: "从概念、色彩与版式出发，把模糊需求转化成统一、可延展的视觉语言。", tags: ["品牌视觉", "动态设计", "界面 / 体验"] },
-        { title: "AI × 设计", subtitle: "AI 共创与迭代", text: "将生成式工具嵌入研究、发散和验证环节，快速探索方向，同时保留设计判断。", tags: ["概念生成", "工作流设计", "快速原型"] },
+        { title: "游戏叙事", subtitle: "游戏叙事与体验", text: "从角色、空间与交互节奏出发，把玩法机制转化为清晰、有情绪的体验叙事。", tags: ["叙事设计", "交互节奏", "快速原型"] },
         { title: "实时三维", subtitle: "实时视觉与三维", text: "熟悉 Unity、UE、Maya 与 SP，从模型动画到实时场景完成跨媒介表达。", tags: ["Unity / UE", "Maya / SP", "动画"] },
         { title: "从 0 到 1", subtitle: "从策略到落地", text: "覆盖前期调研、创意提案、视觉深化与供应商协作，让设计在真实场景中成立。", tags: ["策略研究", "跨团队协作", "落地统筹"] }
       ],
@@ -103,22 +103,22 @@
       documentTitle: "WU YUYAN — Game Designer",
       nav: ["ABOUT", "WORK", "EDUCATION", "PROJECTS", "EXPERTISE"],
       contactCta: "LET'S TALK",
-      heroKicker: "GAME · VISUAL · AI DESIGNER",
-      heroTitle: ["GAME", "DESIGNER", "VISUAL · AI · STORY"],
+      heroKicker: "GAME DESIGN · VISUAL ART · INTERACTIVE STORYTELLING",
+      heroTitle: ["GAME", "DESIGNER", ""],
       heroAria: "Wu Yuyan, game designer",
-      heroCaption: ["ROOM_01 / MINE", "AN IMAGINED WORLD →"],
+      heroCaption: ["WU YUYAN", "GAME DESIGNER →"],
       scribbles: ["ideas hide here ↓", "draw · build · play"],
-      heroIntro: "I’m Wu Yuyan, a designer working across visual identity, brands and real-time experiences.<br />I turn ideas into clear, tangible outcomes through sharp aesthetics and rapid iteration.",
+      heroIntro: "I’m Wu Yuyan, a game designer working across mechanics, visual art and real-time experiences.<br />I turn ideas into clear, playable experiences through narrative, interaction and rapid prototyping.",
       scroll: "SCROLL TO EXPLORE",
       heroIndex: ["PORTFOLIO", "2026 / 01"],
-      ticker: ["VISUAL DESIGN", "AI CREATIVE", "BRAND SYSTEM", "REALTIME 3D"],
-      aboutLabel: '<span>01</span> ABOUT',
+      ticker: ["GAME DESIGN", "GAME ART", "INTERACTIVE STORY", "REALTIME 3D"],
+      aboutLabel: "ABOUT",
       aboutTitle: "A multidisciplinary practice across<br />visuals, technology and physical space.",
       portraitCaption: ["WUYUYAN.JPG", "BEIJING · CN"],
       aboutLead: "I believe strong visuals should do more than look good: they should clarify problems, shape emotion and work in the real world.",
       aboutBody: "I hold a BA in Digital Media Art from Beijing Forest University and an MA in Game Design & Art from Goldsmiths, University of London. My practice spans branding, graphic design, spatial styling, game art, real-time engines and interactive prototypes.",
       stats: ["Games Experienced", "Published Game Projects", "Design & 3D Tools", "Game Jam Delivery"],
-      workLabel: '<span>02</span> WORK EXPERIENCE',
+      workLabel: "<span>02</span> WORK EXPERIENCE",
       workTitle: "From research and strategy<br />to design in the real world.",
       workEyebrow: "PROFESSIONAL ROLE",
       workCompany: "Beijing Tangdun Landscape Technology Co., Ltd.",
@@ -136,7 +136,7 @@
         "Coordinated internal teams, external partners and suppliers to move designs into production while maintaining quality and communication.",
         "Sourced suppliers, compared quotations and conducted site visits, adapting proposals to construction conditions and on-site feedback."
       ],
-      educationLabel: '<span>03</span> EDUCATION',
+      educationLabel: "<span>03</span> EDUCATION",
       educationTitle: "From digital media art<br />to games and immersive experiences.",
       education: [
         {
@@ -158,7 +158,7 @@
           topics: ["User Experience Design", "Interaction Design", "Game Design & Art", "Front-end Development", "Motion Graphics", "Interactive Books & Game Engines"]
         }
       ],
-      projectsLabel: '<span>04</span> SELECTED WORK',
+      projectsLabel: "<span>04</span> SELECTED WORK",
       projectsTitle: "Projects are not exhibits.<br />They are designed experiences.",
       projectsNote: "FEATURED 03 / ALL 08",
       projectTitles: ["MINE", "OH! / PLATFORM BUILDER", "FISHING / 3D STUDY"],
@@ -170,8 +170,8 @@
       ],
       projectHover: "VIEW ON ITCH.IO",
       sourceNote: "* Project information and images come from my public itch.io pages. Open a card to view, play or download.",
-      profileLink: "VIEW ITCH.IO PROFILE <span>↗</span>",
-      archiveLabel: '<span>05</span> MORE PROJECTS / FULL LIST',
+      profileLink: "VIEW ITCH.IO PROFILE",
+      archiveLabel: "<span>05</span> MORE PROJECTS / FULL LIST",
       archiveCount: "ALL WORK 08 / 08",
       archiveMeta: ["UE5 · ACTION RPG", "UE4 · ACTION PROTOTYPE", "GLOBAL GAME JAM · PUZZLE", "GGJ 2022 · 2D PLATFORMER", "3D ART · AR · UI"],
       archiveTitles: ["AI BATTLE DEMO 2.0", "AI BATTLE DEMO", "GIE-GIE-GIE", "RIFTCROSSER", "DARKENING"],
@@ -182,11 +182,11 @@
         "A 2D platformer built around dual-hand controls and scene switching, created during Global Game Jam 2022.",
         "A five-person AR project. I contributed to gameplay planning and produced 3D models, animation, materials and UI motion."
       ],
-      strengthsLabel: '<span>05</span> EXPERTISE',
+      strengthsLabel: "<span>05</span> EXPERTISE",
       strengthsTitle: "Finding smarter visual paths<br />between aesthetics and systems.",
       strengths: [
         { title: "VISUAL SYSTEM", subtitle: "Coherent visual languages", text: "Turning ambiguous needs into unified and extensible visual systems through concept, colour and composition.", tags: ["Brand Visuals", "Motion Design", "UI / UX"] },
-        { title: "AI × DESIGN", subtitle: "Co-creation and iteration", text: "Embedding generative tools into research, ideation and validation to explore faster while preserving design judgement.", tags: ["Concept Generation", "Workflow Design", "Rapid Prototyping"] },
+        { title: "GAME NARRATIVE", subtitle: "Narrative and experience", text: "Turning mechanics into clear, emotional experiences through character, space and interaction rhythm.", tags: ["Narrative Design", "Interaction Rhythm", "Rapid Prototyping"] },
         { title: "REALTIME 3D", subtitle: "Real-time visuals and 3D", text: "Working across Unity, Unreal, Maya and Substance Painter, from modelling and animation to real-time environments.", tags: ["Unity / UE", "Maya / SP", "Animation"] },
         { title: "0 → 1 DELIVERY", subtitle: "From strategy to launch", text: "Covering research, creative proposals, visual development and supplier coordination to make design work in physical space.", tags: ["Strategic Research", "Cross-team Work", "Delivery"] }
       ],
@@ -200,122 +200,37 @@
     }
   };
 
-  const q = (selector, root = document) => root.querySelector(selector);
-  const qa = (selector, root = document) => Array.from(root.querySelectorAll(selector));
-  const setText = (selector, value, root = document) => {
-    const node = q(selector, root);
-    if (node) node.textContent = value;
-  };
-  const setHtml = (selector, value, root = document) => {
-    const node = q(selector, root);
-    if (node) node.innerHTML = value;
-  };
-  const setTexts = (selector, values, root = document) => {
-    qa(selector, root).forEach((node, index) => {
-      if (values[index] !== undefined) node.textContent = values[index];
-    });
-  };
+  // ---- generic path-based renderer -------------------------------------
+  // Any element can declare data-i18n="path.to.value" (textContent) or
+  // data-i18n-html="path.to.value" (innerHTML, for values containing
+  // markup like <br/>/<span>/<em>). Paths are resolved against the copy
+  // object for the active language, so nested arrays/objects (education,
+  // strengths, project lists...) are addressed directly — no selector
+  // hunting, no runtime DOM rebuilding.
+  const getPath = (obj, path) => path.split(".").reduce((node, key) => (node == null ? undefined : node[key]), obj);
 
   function renderLanguage(language) {
     const c = copy[language];
+    if (!c) return;
+
     document.documentElement.lang = language === "zh" ? "zh-CN" : "en";
     document.documentElement.dataset.language = language;
     document.title = c.documentTitle;
 
-    setTexts(".nav-links .nav-label", c.nav);
-    setHtml(".contact-pill", `<span class="status-dot"></span>${c.contactCta}<span aria-hidden="true">↗</span>`);
-    setHtml(".hero-kicker", `<span class="kicker-line"></span>${c.heroKicker}`);
-    setTexts(".hero-title > span", c.heroTitle);
-    const heroTitle = q(".hero-title");
+    document.querySelectorAll("[data-i18n]").forEach((el) => {
+      const value = getPath(c, el.getAttribute("data-i18n"));
+      if (value !== undefined) el.textContent = value;
+    });
+
+    document.querySelectorAll("[data-i18n-html]").forEach((el) => {
+      const value = getPath(c, el.getAttribute("data-i18n-html"));
+      if (value !== undefined) el.innerHTML = value;
+    });
+
+    const heroTitle = document.querySelector(".hero-title");
     if (heroTitle) heroTitle.setAttribute("aria-label", c.heroAria);
-    setTexts(".hero-sketch-card figcaption span", c.heroCaption);
-    setText(".scribble-one", c.scribbles[0]);
-    setText(".scribble-two", c.scribbles[1]);
-    setHtml(".hero-intro", c.heroIntro);
-    setText(".scroll-cue span", c.scroll);
-    setTexts(".hero-index span", c.heroIndex);
-    qa(".ticker-track span").forEach((node, index) => { node.textContent = c.ticker[index % c.ticker.length]; });
 
-    setHtml(".about .section-head > p", c.aboutLabel);
-    setHtml(".about .section-head h2", c.aboutTitle);
-    setTexts(".portrait-frame figcaption span", c.portraitCaption);
-    setText(".about-lead", c.aboutLead);
-    const aboutParagraphs = qa(".about-copy > p");
-    if (aboutParagraphs[1]) aboutParagraphs[1].textContent = c.aboutBody;
-    setTexts(".stat span", c.stats);
-
-    setHtml(".work-section .section-head > p", c.workLabel);
-    setHtml(".work-section .section-head h2", c.workTitle);
-    setText(".experience-eyebrow", c.workEyebrow);
-    setText(".experience-card-head h3", c.workCompany);
-    setText(".experience-card-head p", c.workCompanySub);
-    setText(".experience-period span", c.workDuration);
-    setText(".work-role-note > span", c.roleLabel);
-    setText(".work-role-note strong", c.role);
-    setText(".work-role-note p", c.workFocus);
-    setText(".work-role-note small", c.workLocation);
-    setText(".work-responsibilities .detail-label", c.responsibilitiesLabel);
-    setTexts(".work-responsibilities li p", c.responsibilities);
-
-    setHtml(".education-section .section-head > p", c.educationLabel);
-    setHtml(".education-section .section-head h2", c.educationTitle);
-    qa(".education-card").forEach((card, index) => {
-      const item = c.education[index];
-      if (!item) return;
-      setText(".education-period span", item.duration, card);
-      setText(".education-school > span", item.location, card);
-      setText(".education-school h3", item.school, card);
-      const schoolEn = q(".education-school p", card);
-      if (schoolEn) {
-        schoolEn.textContent = "";
-        schoolEn.hidden = true;
-      }
-      setText(".education-school > strong", item.degree, card);
-      setText(".education-research .detail-label", item.researchLabel, card);
-      setText(".education-research > p", item.direction, card);
-      setTexts(".education-research li", item.topics, card);
-    });
-
-    setHtml(".projects .section-head > p", c.projectsLabel);
-    setHtml(".projects .section-head h2", c.projectsTitle);
-    setText(".projects .section-note", c.projectsNote);
-    qa(".projects-grid .project-card").forEach((card, index) => {
-      setText(".project-meta h3", c.projectTitles[index], card);
-      setText(".project-meta > div p", c.projectRoles[index], card);
-      setText(".project-summary", c.projectSummaries[index], card);
-      setText(".project-hover span", c.projectHover, card);
-    });
-    setText(".project-source-row .visual-note", c.sourceNote);
-    setHtml(".project-source-row > a", c.profileLink);
-    setHtml(".archive-head p", c.archiveLabel);
-    const archiveCount = q(".archive-head > span");
-    if (archiveCount) archiveCount.textContent = c.archiveCount;
-    qa(".archive-card").forEach((card, index) => {
-      setText(".archive-copy > p", c.archiveMeta[index], card);
-      setText(".archive-copy h3", c.archiveTitles[index], card);
-      setText(".archive-copy > span", c.archiveSummaries[index], card);
-    });
-
-    setHtml(".strengths .section-head > p", c.strengthsLabel);
-    setHtml(".strengths .section-head h2", c.strengthsTitle);
-    qa(".strength-card").forEach((card, index) => {
-      const item = c.strengths[index];
-      if (!item) return;
-      setText("h3", item.title, card);
-      setText("h4", item.subtitle, card);
-      setText("p", item.text, card);
-      setTexts("li", item.tags, card);
-    });
-
-    setHtml(".contact-kicker", `<span class="status-dot"></span>${c.contactKicker}`);
-    setHtml(".contact-handnote", c.contactNote);
-    setHtml(".contact-inner h2", c.contactTitle);
-    setText(".contact-main span", c.contactButton);
-    setTexts(".contact-footer > div > span", c.footerLabels);
-    setText(".contact-footer > div:nth-child(3) p", c.base);
-    setText(".back-top", c.backTop);
-
-    qa(".language-toggle button").forEach((button) => {
+    document.querySelectorAll(".language-toggle button").forEach((button) => {
       const active = button.dataset.language === language;
       button.classList.toggle("is-active", active);
       button.setAttribute("aria-pressed", String(active));
@@ -323,24 +238,8 @@
   }
 
   function mountToggle() {
-    const topbar = q(".topbar");
-    const contact = q(".contact-pill");
-    if (!topbar || !contact || q(".language-toggle")) return;
-
-    const actions = document.createElement("div");
-    actions.className = "top-actions";
-    contact.before(actions);
-
-    const toggle = document.createElement("div");
-    toggle.className = "language-toggle";
-    toggle.setAttribute("role", "group");
-    toggle.setAttribute("aria-label", "语言 / Language");
-    toggle.innerHTML = `
-      <button type="button" data-language="zh" aria-pressed="true">中文</button>
-      <button type="button" data-language="en" aria-pressed="false">EN</button>
-    `;
-    actions.append(toggle, contact);
-
+    const toggle = document.querySelector(".language-toggle");
+    if (!toggle) return;
     toggle.addEventListener("click", (event) => {
       const button = event.target.closest("button[data-language]");
       if (!button) return;
@@ -351,7 +250,7 @@
   }
 
   function mountNavigationTracking() {
-    const links = qa('.nav-links a[href^="#"]');
+    const links = Array.from(document.querySelectorAll('.nav-links a[href^="#"]'));
     if (!links.length) return;
 
     const setCurrent = (id) => {
@@ -363,7 +262,7 @@
       });
     };
 
-    const brand = q('.brand-mark[href="#home"]');
+    const brand = document.querySelector('.brand-mark[href="#home"]');
     if (brand) brand.addEventListener("click", () => setCurrent("home"));
     links.forEach((link) => {
       link.addEventListener("click", () => setCurrent(link.getAttribute("href").slice(1)));
@@ -378,7 +277,7 @@
     }, { rootMargin: "-18% 0px -62% 0px", threshold: [0, .15, .4] });
 
     links.forEach((link) => {
-      const section = q(link.getAttribute("href"));
+      const section = document.querySelector(link.getAttribute("href"));
       if (section) observer.observe(section);
     });
   }
