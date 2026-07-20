@@ -6,9 +6,9 @@
       navMenu: "导航",
       contactCta: "联系我",
       heroKicker: "游戏设计 · 视觉美术 · 交互叙事",
-      heroTitle: ["游戏", "设计师", ""],
+      heroTitle: ["游戏设计师"],
       heroAria: "游戏设计师吴宇艳",
-      heroCaption: ["吴宇艳", "游戏设计师 →"],
+      heroCaption: ["可玩世界", "PLAYABLE WORLDS →"],
       scribbles: ["灵感藏在这里 ↓", "绘制 · 构建 · 玩耍"],
       heroIntro: "我是吴宇艳，一名在游戏机制、视觉美术与实时体验之间工作的游戏设计师。<br />用叙事、交互和快速原型，把想法推进为清晰、可玩的体验。",
       scroll: "向下探索",
@@ -19,7 +19,14 @@
       portraitCaption: ["吴宇艳.照片", "北京 · 中国"],
       aboutLead: "我相信好的视觉不只需要“好看”，还要能解释问题、建立感受，并最终被真实地使用。",
       aboutBody: "北京林业大学数字媒体艺术学士，伦敦大学金史密斯学院游戏设计与艺术硕士。我的经验横跨品牌与平面、空间美陈、游戏美术、实时引擎和交互原型，能够在约束中快速找到有力的视觉解法。",
-      stats: ["游戏体验样本", "公开游戏项目", "设计与三维工具", "大赛限时交付"],
+      stats: ["游戏体验样本", "公开游戏项目", "设计与三维工具", "Game Jam 限时交付"],
+      statHint: "悬浮 / 点击查看口径 ↗",
+      statDetails: [
+        { title: "300+ 个体验与拆解样本", text: "累计体验、观察并记录的游戏参考，用于拆解机制、交互节奏、叙事和视觉方向；这里统计的是参考样本，不是参与制作的项目数。" },
+        { title: "7 个公开可访问项目", text: "指 itch.io 上可查看、试玩或下载的游戏与交互原型，覆盖独立解谜、平台玩法、动作原型、Game Jam 团队项目和增强现实体验。" },
+        { title: "跨设计、三维与引擎的工作流", text: "作品集可核验 Maya、Substance Painter、ZBrush；项目还覆盖 Unity、Unreal Engine，以及平面、界面、动效和原型工具。10+ 表示跨软件协作范围，不是熟练度评分。" },
+        { title: "48 小时完成可玩原型", text: "以 Global Game Jam 的典型时限为口径：从主题理解、玩法构思和分工，到美术制作、关卡整合、测试与发布，在短周期内完成团队可玩版本。" }
+      ],
       workLabel: "<span>02</span> 工作经历",
       workTitle: "从调研与策略开始，<br />把设计推进到真实场景。",
       workEyebrow: "工作职位",
@@ -106,9 +113,9 @@
       navMenu: "MENU",
       contactCta: "LET'S TALK",
       heroKicker: "GAME DESIGN · VISUAL ART · INTERACTIVE STORYTELLING",
-      heroTitle: ["GAME", "DESIGNER", ""],
+      heroTitle: ["GAME DESIGNER"],
       heroAria: "Wu Yuyan, game designer",
-      heroCaption: ["WU YUYAN", "GAME DESIGNER →"],
+      heroCaption: ["PLAYABLE WORLDS", "可玩世界 →"],
       scribbles: ["ideas hide here ↓", "draw · build · play"],
       heroIntro: "I’m Wu Yuyan, a game designer working across mechanics, visual art and real-time experiences.<br />I turn ideas into clear, playable experiences through narrative, interaction and rapid prototyping.",
       scroll: "SCROLL TO EXPLORE",
@@ -119,7 +126,14 @@
       portraitCaption: ["WUYUYAN.JPG", "BEIJING · CN"],
       aboutLead: "I believe strong visuals should do more than look good: they should clarify problems, shape emotion and work in the real world.",
       aboutBody: "I hold a BA in Digital Media Art from Beijing Forest University and an MA in Game Design & Art from Goldsmiths, University of London. My practice spans branding, graphic design, spatial styling, game art, real-time engines and interactive prototypes.",
-      stats: ["Games Experienced", "Published Game Projects", "Design & 3D Tools", "Game Jam Delivery"],
+      stats: ["Game Reference Samples", "Published Game Projects", "Design & 3D Tools", "48-hour Game Jam Delivery"],
+      statHint: "HOVER / TAP FOR DETAILS ↗",
+      statDetails: [
+        { title: "300+ play and analysis samples", text: "A growing reference library of games experienced, observed and documented to study mechanics, interaction rhythm, narrative and visual direction. This counts reference samples, not projects I helped make." },
+        { title: "7 publicly accessible projects", text: "Games and interactive prototypes available on itch.io to view, play or download, spanning solo puzzles, platform mechanics, action prototypes, Game Jam collaborations and an augmented-reality experience." },
+        { title: "A cross-design, 3D and engine workflow", text: "The portfolio directly documents Maya, Substance Painter and ZBrush; project work also covers Unity, Unreal Engine and tools for graphics, UI, motion and prototyping. 10+ describes workflow range, not a proficiency score." },
+        { title: "A playable prototype in 48 hours", text: "Based on a typical Global Game Jam window: moving from theme interpretation, gameplay ideation and team roles through art production, level integration, testing and release within an intensive short cycle." }
+      ],
       workLabel: "<span>02</span> WORK EXPERIENCE",
       workTitle: "From research and strategy<br />to design in the real world.",
       workEyebrow: "PROFESSIONAL ROLE",
@@ -237,6 +251,8 @@
       button.classList.toggle("is-active", active);
       button.setAttribute("aria-pressed", String(active));
     });
+
+    document.dispatchEvent(new CustomEvent("portfolio:language", { detail: { language } }));
   }
 
   function mountToggle() {
@@ -316,10 +332,70 @@
     });
   }
 
+  function mountStatsDialog() {
+    const dialog = document.querySelector("#stats-dialog");
+    const cards = Array.from(document.querySelectorAll(".stat[data-stat-index]"));
+    if (!dialog || !cards.length) return;
+
+    const panel = dialog.querySelector(".stats-dialog-panel");
+    const closeButton = dialog.querySelector(".stats-dialog-close");
+    const backdrop = dialog.querySelector(".stats-dialog-backdrop");
+    const value = dialog.querySelector(".stats-dialog-value");
+    const title = dialog.querySelector("#stats-dialog-title");
+    const body = dialog.querySelector(".stats-dialog-copy");
+    let activeIndex = -1;
+    let returnFocus = null;
+
+    const currentLanguage = () => document.documentElement.dataset.language === "en" ? "en" : "zh";
+
+    const fill = () => {
+      if (activeIndex < 0) return;
+      const card = cards[activeIndex];
+      const details = copy[currentLanguage()].statDetails[activeIndex];
+      value.textContent = card.querySelector("strong")?.textContent || "";
+      title.textContent = details.title;
+      body.textContent = details.text;
+    };
+
+    const open = (index, trigger) => {
+      activeIndex = index;
+      returnFocus = trigger;
+      fill();
+      dialog.hidden = false;
+      document.body.classList.add("has-stats-dialog");
+      requestAnimationFrame(() => {
+        dialog.classList.add("is-open");
+        closeButton.focus();
+      });
+    };
+
+    const close = () => {
+      if (dialog.hidden) return;
+      dialog.classList.remove("is-open");
+      document.body.classList.remove("has-stats-dialog");
+      window.setTimeout(() => { dialog.hidden = true; }, 180);
+      returnFocus?.focus();
+      activeIndex = -1;
+    };
+
+    cards.forEach((card, index) => card.addEventListener("click", () => open(index, card)));
+    closeButton.addEventListener("click", close);
+    backdrop.addEventListener("click", close);
+    document.addEventListener("portfolio:language", fill);
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && !dialog.hidden) close();
+      if (event.key === "Tab" && !dialog.hidden && panel && !panel.contains(event.target)) {
+        event.preventDefault();
+        closeButton.focus();
+      }
+    });
+  }
+
   function init() {
     mountToggle();
     mountNavigationMenu();
     mountNavigationTracking();
+    mountStatsDialog();
     let language = "zh";
     try {
       const saved = localStorage.getItem("portfolio-language");

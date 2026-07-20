@@ -1037,7 +1037,7 @@ a {
   </head>
   <body>
     <link rel="preload" as="image" href="./portfolio/hero-frame.webp" />
-    <link rel="preload" as="image" href="./portfolio/og-handdrawn-clean.webp" />
+    <link rel="preload" as="image" href="./portfolio/og-playable-worlds.webp" />
     <div class="site-shell">
       <header class="topbar">
         <a class="brand-mark" href="#home" aria-label="返回首页"><span>WYY</span><i></i></a>
@@ -1071,13 +1071,16 @@ a {
           <div class="hero-shade"></div>
           <div class="hero-noise"></div>
 
-          <figure class="hero-sketch-card" aria-hidden="true">
-            <img src="./portfolio/og-handdrawn-clean.webp" alt="" width="1672" height="941" />
-            <figcaption>
-              <span data-i18n="heroCaption.0">吴宇艳</span>
-              <span data-i18n="heroCaption.1">游戏设计师 →</span>
-            </figcaption>
-          </figure>
+          <div class="hero-cover-stack">
+            <figure class="hero-sketch-card">
+              <img src="./portfolio/og-playable-worlds.webp" alt="可玩世界 PLAYABLE WORLDS 手绘主题封面" width="1536" height="864" />
+              <figcaption>
+                <span data-i18n="heroCaption.0">可玩世界</span>
+                <span data-i18n="heroCaption.1">PLAYABLE WORLDS →</span>
+              </figcaption>
+            </figure>
+            <h1 class="hero-title" data-i18n="heroTitle.0" aria-label="游戏设计师吴宇艳">游戏设计师</h1>
+          </div>
           <div class="hero-scribbles" aria-hidden="true">
             <span class="scribble-one" data-i18n="scribbles.0">灵感藏在这里 ↓</span>
             <span class="scribble-two" data-i18n="scribbles.1">绘制 · 构建 · 玩耍</span>
@@ -1088,11 +1091,6 @@ a {
             <div class="hero-kicker">
               <span class="kicker-line"></span><span data-i18n="heroKicker">游戏设计 · 视觉美术 · 交互叙事</span>
             </div>
-            <h1 class="hero-title" aria-label="游戏设计师吴宇艳">
-              <span data-i18n="heroTitle.0">游戏</span>
-              <span class="title-outline" data-i18n="heroTitle.1">设计师</span>
-              <span class="title-small" data-i18n="heroTitle.2"></span>
-            </h1>
             <div class="hero-lower">
               <div class="hero-coordinates">
                 <span>39.9042° N</span>
@@ -1132,7 +1130,7 @@ a {
             <div class="about-grid">
               <figure class="portrait-frame">
                 <div class="portrait-glow"></div>
-                <img src="./portfolio/portrait.webp" alt="视觉设计师吴宇艳" loading="lazy" decoding="async" />
+                <img src="./portfolio/portrait-2025.webp" alt="游戏设计师吴宇艳证件照" loading="lazy" decoding="async" />
                 <figcaption>
                   <span data-i18n="portraitCaption.0">吴宇艳.照片</span>
                   <span data-i18n="portraitCaption.1">北京 · 中国</span>
@@ -1147,14 +1145,36 @@ a {
                 </div>
               </div>
             </div>
-            <div class="stats-grid">
-              <div class="stat"><strong>300+</strong><span data-i18n="stats.0">游戏体验样本</span></div>
-              <div class="stat"><strong>07</strong><span data-i18n="stats.1">公开游戏项目</span></div>
-              <div class="stat"><strong>10+</strong><span data-i18n="stats.2">设计与三维工具</span></div>
-              <div class="stat"><strong>48H</strong><span data-i18n="stats.3">大赛限时交付</span></div>
+            <div class="stats-grid" aria-label="能力数据，悬浮或点击查看说明">
+              <button class="stat" type="button" data-stat-index="0" aria-haspopup="dialog" aria-controls="stats-dialog">
+                <strong>300+</strong><span data-i18n="stats.0">游戏体验样本</span><small data-i18n="statHint">悬浮 / 点击查看口径 ↗</small>
+                <span class="stat-popover" role="tooltip"><b data-i18n="statDetails.0.title">300+ 个体验与拆解样本</b><em data-i18n="statDetails.0.text">累计体验、观察并记录的游戏参考，用于拆解机制、交互节奏、叙事和视觉方向；这里统计的是参考样本，不是参与制作的项目数。</em></span>
+              </button>
+              <button class="stat" type="button" data-stat-index="1" aria-haspopup="dialog" aria-controls="stats-dialog">
+                <strong>07</strong><span data-i18n="stats.1">公开游戏项目</span><small data-i18n="statHint">悬浮 / 点击查看口径 ↗</small>
+                <span class="stat-popover" role="tooltip"><b data-i18n="statDetails.1.title">7 个公开可访问项目</b><em data-i18n="statDetails.1.text">指 itch.io 上可查看、试玩或下载的游戏与交互原型，覆盖独立解谜、平台玩法、动作原型、Game Jam 团队项目和增强现实体验。</em></span>
+              </button>
+              <button class="stat" type="button" data-stat-index="2" aria-haspopup="dialog" aria-controls="stats-dialog">
+                <strong>10+</strong><span data-i18n="stats.2">设计与三维工具</span><small data-i18n="statHint">悬浮 / 点击查看口径 ↗</small>
+                <span class="stat-popover" role="tooltip"><b data-i18n="statDetails.2.title">跨设计、三维与引擎的工作流</b><em data-i18n="statDetails.2.text">作品集可核验 Maya、Substance Painter、ZBrush；项目还覆盖 Unity、Unreal Engine，以及平面、界面、动效和原型工具。10+ 表示跨软件协作范围，不是熟练度评分。</em></span>
+              </button>
+              <button class="stat" type="button" data-stat-index="3" aria-haspopup="dialog" aria-controls="stats-dialog">
+                <strong>48H</strong><span data-i18n="stats.3">Game Jam 限时交付</span><small data-i18n="statHint">悬浮 / 点击查看口径 ↗</small>
+                <span class="stat-popover" role="tooltip"><b data-i18n="statDetails.3.title">48 小时完成可玩原型</b><em data-i18n="statDetails.3.text">以 Global Game Jam 的典型时限为口径：从主题理解、玩法构思和分工，到美术制作、关卡整合、测试与发布，在短周期内完成团队可玩版本。</em></span>
+              </button>
             </div>
           </div>
         </section>
+
+        <div class="stats-dialog" id="stats-dialog" role="dialog" aria-modal="true" aria-labelledby="stats-dialog-title" hidden>
+          <button class="stats-dialog-backdrop" type="button" aria-label="关闭数据说明"></button>
+          <div class="stats-dialog-panel" role="document">
+            <button class="stats-dialog-close" type="button" aria-label="关闭">×</button>
+            <span class="stats-dialog-value" aria-hidden="true"></span>
+            <h2 id="stats-dialog-title"></h2>
+            <p class="stats-dialog-copy"></p>
+          </div>
+        </div>
 
         <section class="experience-section work-section section-block" id="experience">
           <div class="page-width">
