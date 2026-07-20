@@ -49,7 +49,7 @@
       educationTitle: "从数字媒体艺术，<br />走向游戏与沉浸式体验。",
       education: [
         {
-          duration: "1年",
+          duration: "1年5个月",
           location: "伦敦 · 英国",
           school: "伦敦大学金史密斯学院",
           degree: "游戏设计与艺术 · 硕士",
@@ -165,7 +165,7 @@
       educationTitle: "From digital media art<br />to games and immersive experiences.",
       education: [
         {
-          duration: "1 YEAR",
+          duration: "1 YEAR 5 MONTHS",
           location: "LONDON · UK",
           school: "Goldsmiths, University of London",
           degree: "MA GAME DESIGN & ART",
