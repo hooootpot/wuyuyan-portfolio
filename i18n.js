@@ -3,6 +3,7 @@
     zh: {
       documentTitle: "吴宇艳 — 游戏设计师 / Game Designer",
       nav: ["关于", "工作", "学习", "项目", "优势"],
+      navMenu: "导航",
       contactCta: "联系我",
       heroKicker: "游戏设计 · 视觉美术 · 交互叙事",
       heroTitle: ["游戏", "设计师", ""],
@@ -102,6 +103,7 @@
     en: {
       documentTitle: "WU YUYAN — Game Designer",
       nav: ["ABOUT", "WORK", "EDUCATION", "PROJECTS", "EXPERTISE"],
+      navMenu: "MENU",
       contactCta: "LET'S TALK",
       heroKicker: "GAME DESIGN · VISUAL ART · INTERACTIVE STORYTELLING",
       heroTitle: ["GAME", "DESIGNER", ""],
@@ -282,8 +284,41 @@
     });
   }
 
+  function mountNavigationMenu() {
+    const button = document.querySelector(".nav-menu-toggle");
+    const navigation = document.querySelector(".nav-links");
+    if (!button || !navigation) return;
+
+    const setOpen = (open) => {
+      navigation.classList.toggle("is-open", open);
+      button.classList.toggle("is-open", open);
+      button.setAttribute("aria-expanded", String(open));
+    };
+
+    button.addEventListener("click", () => {
+      setOpen(button.getAttribute("aria-expanded") !== "true");
+    });
+
+    navigation.addEventListener("click", (event) => {
+      if (event.target.closest('a[href^="#"]')) setOpen(false);
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") setOpen(false);
+    });
+
+    document.addEventListener("click", (event) => {
+      if (!navigation.contains(event.target) && !button.contains(event.target)) setOpen(false);
+    });
+
+    window.matchMedia("(min-width: 761px)").addEventListener?.("change", (event) => {
+      if (event.matches) setOpen(false);
+    });
+  }
+
   function init() {
     mountToggle();
+    mountNavigationMenu();
     mountNavigationTracking();
     let language = "zh";
     try {

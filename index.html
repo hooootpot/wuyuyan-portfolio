@@ -1037,17 +1037,10 @@ a {
   </head>
   <body>
     <link rel="preload" as="image" href="./portfolio/hero-frame.webp" />
-    <link rel="preload" as="image" href="./portfolio/og-handdrawn.webp" />
+    <link rel="preload" as="image" href="./portfolio/og-handdrawn-clean.webp" />
     <div class="site-shell">
       <header class="topbar">
         <a class="brand-mark" href="#home" aria-label="返回首页"><span>WYY</span><i></i></a>
-        <nav class="nav-links" aria-label="主导航">
-          <a href="#about"><span class="nav-index">01</span><span class="nav-label" data-i18n="nav.0">关于</span></a>
-          <a href="#experience"><span class="nav-index">02</span><span class="nav-label" data-i18n="nav.1">工作</span></a>
-          <a href="#education"><span class="nav-index">03</span><span class="nav-label" data-i18n="nav.2">学习</span></a>
-          <a href="#projects"><span class="nav-index">04</span><span class="nav-label" data-i18n="nav.3">项目</span></a>
-          <a href="#strengths"><span class="nav-index">05</span><span class="nav-label" data-i18n="nav.4">优势</span></a>
-        </nav>
         <div class="top-actions">
           <div class="language-toggle" role="group" aria-label="语言 / Language">
             <button type="button" data-language="zh" aria-pressed="true">中文</button>
@@ -1059,6 +1052,17 @@ a {
         </div>
       </header>
 
+      <nav class="nav-links" id="site-navigation" aria-label="主导航">
+        <a href="#about"><span class="nav-index">01</span><span class="nav-label" data-i18n="nav.0">关于</span></a>
+        <a href="#experience"><span class="nav-index">02</span><span class="nav-label" data-i18n="nav.1">工作</span></a>
+        <a href="#education"><span class="nav-index">03</span><span class="nav-label" data-i18n="nav.2">学习</span></a>
+        <a href="#projects"><span class="nav-index">04</span><span class="nav-label" data-i18n="nav.3">项目</span></a>
+        <a href="#strengths"><span class="nav-index">05</span><span class="nav-label" data-i18n="nav.4">优势</span></a>
+      </nav>
+      <button class="nav-menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation">
+        <span aria-hidden="true">✦</span><span data-i18n="navMenu">导航</span>
+      </button>
+
       <main>
         <section class="hero" id="home">
           <video class="hero-video" autoplay muted loop playsinline poster="./portfolio/hero-frame.webp" aria-hidden="true">
@@ -1068,7 +1072,7 @@ a {
           <div class="hero-noise"></div>
 
           <figure class="hero-sketch-card" aria-hidden="true">
-            <img src="./portfolio/og-handdrawn.webp" alt="" width="1672" height="941" />
+            <img src="./portfolio/og-handdrawn-clean.webp" alt="" width="1672" height="941" />
             <figcaption>
               <span data-i18n="heroCaption.0">吴宇艳</span>
               <span data-i18n="heroCaption.1">游戏设计师 →</span>
