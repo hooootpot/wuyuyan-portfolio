@@ -20,12 +20,12 @@
       aboutLead: "我相信好的视觉不只需要“好看”，还要能解释问题、建立感受，并最终被真实地使用。",
       aboutBody: "北京林业大学数字媒体艺术学士，伦敦大学金史密斯学院游戏设计与艺术硕士。我的经验横跨品牌与平面、空间美陈、游戏美术、实时引擎和交互原型，能够在约束中快速找到有力的视觉解法。",
       stats: ["游戏体验样本", "公开游戏项目", "设计与三维工具", "Game Jam 限时交付"],
-      statHint: "悬浮 / 点击查看口径 ↗",
+      statHint: "点击查看 ↗",
       statDetails: [
-        { title: "300+ 个体验与拆解样本", text: "累计体验、观察并记录的游戏参考，用于拆解机制、交互节奏、叙事和视觉方向；这里统计的是参考样本，不是参与制作的项目数。" },
-        { title: "7 个公开可访问项目", text: "指 itch.io 上可查看、试玩或下载的游戏与交互原型，覆盖独立解谜、平台玩法、动作原型、Game Jam 团队项目和增强现实体验。" },
-        { title: "跨设计、三维与引擎的工作流", text: "作品集可核验 Maya、Substance Painter、ZBrush；项目还覆盖 Unity、Unreal Engine，以及平面、界面、动效和原型工具。10+ 表示跨软件协作范围，不是熟练度评分。" },
-        { title: "48 小时完成可玩原型", text: "以 Global Game Jam 的典型时限为口径：从主题理解、玩法构思和分工，到美术制作、关卡整合、测试与发布，在短周期内完成团队可玩版本。" }
+        { title: "把游玩变成设计研究", text: "我持续体验解谜、平台动作、角色扮演、模拟经营、桌游与互动叙事等不同类型，累计整理 300+ 游戏样本。我会记录关卡节奏、反馈方式、叙事线索和视觉语言，并把这些观察带回自己的玩法与原型设计。" },
+        { title: "从独立原型到团队协作", text: "我在 itch.io 公开了 7 个游戏项目：MINE、OH!、Fishing、AI Battle Demo 2.0、AI Battle Demo、GIE-GIE-GIE 和 RIFTCROSSER，内容包括密室解谜、平台搭建、钓鱼交互、动作战斗与 Game Jam 团队创作。" },
+        { title: "从概念到实时呈现", text: "我的日常工具包括 Maya、Substance Painter、ZBrush、Unity、Unreal Engine 4/5，以及 Photoshop、Illustrator、After Effects、Premiere Pro 和 Figma。我能够独立推进概念设计、建模、UV、材质、绑定、动画、界面与实时引擎整合。" },
+        { title: "在 48 小时里做出能玩的版本", text: "我参加 Global Game Jam 时，需要在 48 小时内完成主题分析、玩法确定、团队分工、美术制作、关卡整合和测试。RIFTCROSSER 围绕双手控制与场景切换完成 2D 平台体验；GIE-GIE-GIE 完成两类谜题和三个限时关卡，我负责视觉与美术方向。" }
       ],
       workLabel: "<span>02</span> 工作经历",
       workTitle: "从调研与策略开始，<br />把设计推进到真实场景。",
@@ -127,12 +127,12 @@
       aboutLead: "I believe strong visuals should do more than look good: they should clarify problems, shape emotion and work in the real world.",
       aboutBody: "I hold a BA in Digital Media Art from Beijing Forest University and an MA in Game Design & Art from Goldsmiths, University of London. My practice spans branding, graphic design, spatial styling, game art, real-time engines and interactive prototypes.",
       stats: ["Game Reference Samples", "Published Game Projects", "Design & 3D Tools", "48-hour Game Jam Delivery"],
-      statHint: "HOVER / TAP FOR DETAILS ↗",
+      statHint: "CLICK TO VIEW ↗",
       statDetails: [
-        { title: "300+ play and analysis samples", text: "A growing reference library of games experienced, observed and documented to study mechanics, interaction rhythm, narrative and visual direction. This counts reference samples, not projects I helped make." },
-        { title: "7 publicly accessible projects", text: "Games and interactive prototypes available on itch.io to view, play or download, spanning solo puzzles, platform mechanics, action prototypes, Game Jam collaborations and an augmented-reality experience." },
-        { title: "A cross-design, 3D and engine workflow", text: "The portfolio directly documents Maya, Substance Painter and ZBrush; project work also covers Unity, Unreal Engine and tools for graphics, UI, motion and prototyping. 10+ describes workflow range, not a proficiency score." },
-        { title: "A playable prototype in 48 hours", text: "Based on a typical Global Game Jam window: moving from theme interpretation, gameplay ideation and team roles through art production, level integration, testing and release within an intensive short cycle." }
+        { title: "Turning play into design research", text: "I continuously play and study puzzle, platform-action, role-playing, management, tabletop and interactive-narrative games, building a library of more than 300 references. I record level pacing, feedback, narrative clues and visual language, then bring those observations into my own mechanics and prototypes." },
+        { title: "From solo prototypes to team projects", text: "I have published seven game projects on itch.io: MINE, OH!, Fishing, AI Battle Demo 2.0, AI Battle Demo, GIE-GIE-GIE and RIFTCROSSER. Together they span escape-room puzzles, platform building, fishing interactions, action combat and collaborative Game Jam development." },
+        { title: "From concept to real-time presentation", text: "My daily toolkit includes Maya, Substance Painter, ZBrush, Unity, Unreal Engine 4/5, Photoshop, Illustrator, After Effects, Premiere Pro and Figma. I can independently move through concept design, modelling, UVs, materials, rigging, animation, UI and real-time engine integration." },
+        { title: "Building a playable version in 48 hours", text: "During Global Game Jam, I work through theme analysis, gameplay decisions, team roles, art production, level integration and testing within 48 hours. RIFTCROSSER became a 2D platformer built around dual-hand controls and scene switching; for GIE-GIE-GIE, I led the visual and art direction across two puzzle types and three timed levels." }
       ],
       workLabel: "<span>02</span> WORK EXPERIENCE",
       workTitle: "From research and strategy<br />to design in the real world.",
