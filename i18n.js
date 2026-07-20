@@ -83,7 +83,7 @@
       sourceNote: "* 项目资料与图片来自本人 itch.io 公开项目页，点击卡片可查看、试玩或下载。",
       profileLink: "查看 ITCH.IO 主页",
       portfolioPdf: {
-        kicker: "完整作品集 PDF",
+        kicker: "艺术积累与尝试",
         title: "PORTFOLIO 2025",
         description: "18 页完整作品集，收录 3D 场景与角色建模、UV 与材质、骨骼绑定、桌游系统和角色概念设计。",
         view: "在线浏览",
@@ -199,7 +199,7 @@
       sourceNote: "* Project information and images come from my public itch.io pages. Open a card to view, play or download.",
       profileLink: "VIEW ITCH.IO PROFILE",
       portfolioPdf: {
-        kicker: "FULL PORTFOLIO PDF",
+        kicker: "ART PRACTICE & EXPLORATION",
         title: "PORTFOLIO 2025",
         description: "An 18-page portfolio spanning 3D environment and character modelling, UVs and texturing, rigging, tabletop systems and character concept design.",
         view: "VIEW ONLINE",

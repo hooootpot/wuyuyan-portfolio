@@ -5599,3 +5599,121 @@ body.has-stats-dialog { overflow: hidden; }
   .portfolio-pdf-copy h3 { font-size: clamp(34px, 12vw, 52px); }
   .portfolio-pdf-copy > p:not(.portfolio-pdf-kicker) { margin: 17px 0 22px; font-size: 12px; }
 }
+
+/* V20 — Portfolio PDF nested inside Visual System expertise */
+.strength-card:first-child {
+  min-height: 560px;
+}
+
+.strength-portfolio {
+  display: grid;
+  grid-template-columns: minmax(150px, .78fr) minmax(0, 1.22fr);
+  gap: 18px;
+  align-items: stretch;
+  margin-top: 24px;
+  padding: 12px;
+  border: 2px solid var(--mine-blue);
+  border-radius: 14px 9px 16px 10px;
+  background: rgba(255, 248, 221, .82);
+  box-shadow: 4px 5px 0 var(--mine-blue);
+  transform: rotate(.35deg);
+}
+
+.strength-portfolio-preview {
+  position: relative;
+  display: block;
+  min-height: 118px;
+  overflow: hidden;
+  border: 2px solid var(--mine-blue);
+  border-radius: 8px 6px 10px 7px;
+  background: var(--mine-blue);
+}
+
+.strength-portfolio-preview img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform .25s ease, filter .25s ease;
+}
+
+.strength-portfolio-preview > span {
+  position: absolute;
+  right: 7px;
+  bottom: 7px;
+  padding: 5px 7px;
+  border: 1px solid var(--mine-blue);
+  border-radius: 999px;
+  color: var(--mine-blue);
+  background: #fff8dd;
+  font: 900 7px/1 "Courier New", monospace;
+}
+
+.strength-portfolio-preview:hover img,
+.strength-portfolio-preview:focus-visible img {
+  filter: saturate(1.12);
+  transform: scale(1.035);
+}
+
+.strength-portfolio-copy {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.strength-portfolio-copy small {
+  color: var(--mine-pink);
+  font: 900 8px/1.2 "Courier New", monospace;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.strength-portfolio-copy > strong {
+  margin-top: 6px;
+  color: var(--mine-blue);
+  font: 900 clamp(18px, 2vw, 28px)/1 "Arial Black", sans-serif;
+  letter-spacing: -.04em;
+}
+
+.strength-card .strength-portfolio-copy > p {
+  margin-top: 9px;
+  font-size: 9px;
+  line-height: 1.5;
+}
+
+.strength-portfolio-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 11px;
+}
+
+.strength-portfolio-actions a {
+  padding: 6px 9px;
+  border: 1px solid var(--mine-blue);
+  border-radius: 999px;
+  color: var(--mine-blue);
+  background: #fff8dd;
+  font-size: 8px;
+  font-weight: 900;
+}
+
+.strength-portfolio-actions a:first-child {
+  color: #fff8dd;
+  background: var(--mine-pink);
+}
+
+@media (max-width: 760px) {
+  .strength-card:first-child { min-height: 0; }
+
+  .strength-portfolio {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-top: 20px;
+  }
+
+  .strength-portfolio-preview { min-height: 136px; }
+  .strength-portfolio-copy > strong { font-size: 23px; }
+  .strength-card .strength-portfolio-copy > p { font-size: 9px; }
+}
