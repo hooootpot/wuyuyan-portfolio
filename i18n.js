@@ -22,7 +22,7 @@
       stats: ["游戏体验样本", "公开游戏项目", "设计与三维工具", "Game Jam 限时交付"],
       statHint: "点击查看 ↗",
       statDetails: [
-        { title: "把游玩变成设计研究", text: "我持续体验解谜、平台动作、角色扮演、模拟经营、桌游与互动叙事等不同类型，累计整理 300+ 游戏样本。我会记录关卡节奏、反馈方式、叙事线索和视觉语言，并把这些观察带回自己的玩法与原型设计。" },
+        { title: "把游玩变成设计研究", text: "我持续体验解谜、平台动作、角色扮演、模拟经营、桌游与互动叙事等不同类型，累计游玩 300+ 游戏样本。我会记录关卡节奏、反馈方式、叙事线索和视觉语言，并把这些观察带回自己的玩法与原型设计。" },
         { title: "从独立原型到团队协作", text: "我在 itch.io 公开了 7 个游戏项目：MINE、OH!、Fishing、AI Battle Demo 2.0、AI Battle Demo、GIE-GIE-GIE 和 RIFTCROSSER，内容包括密室解谜、平台搭建、钓鱼交互、动作战斗与 Game Jam 团队创作。" },
         { title: "从概念到实时呈现", text: "我的日常工具包括 Maya、Substance Painter、ZBrush、Unity、Unreal Engine 4/5，以及 Photoshop、Illustrator、After Effects、Premiere Pro 和 Figma。我能够独立推进概念设计、建模、UV、材质、绑定、动画、界面与实时引擎整合。" },
         { title: "在 48 小时里做出能玩的版本", text: "我参加 Global Game Jam 时，需要在 48 小时内完成主题分析、玩法确定、团队分工、美术制作、关卡整合和测试。RIFTCROSSER 围绕双手控制与场景切换完成 2D 平台体验；GIE-GIE-GIE 完成两类谜题和三个限时关卡，我负责视觉与美术方向。" }
@@ -54,6 +54,7 @@
           school: "伦敦大学金史密斯学院",
           degree: "游戏设计与艺术 · 硕士",
           researchLabel: "研究方向",
+          courseLabel: "课程内容",
           direction: "以游戏设计与艺术为核心，研究实时引擎中的视觉开发、交互机制、3D 内容与沉浸式体验。",
           topics: ["游戏设计与分析", "视觉游戏开发", "3D 建模与动画", "增强现实", "UE4 音频体验", "UE5 游戏开发"]
         },
@@ -63,6 +64,7 @@
           school: "北京林业大学",
           degree: "数字媒体艺术 · 学士",
           researchLabel: "研究方向",
+          courseLabel: "课程内容",
           direction: "围绕数字媒体艺术建立视觉与交互基础，覆盖用户体验、游戏设计、动态图形和前端技术。",
           topics: ["用户体验设计", "交互设计", "游戏设计与美术", "前端技术开发", "动态图形设计", "互动绘本与游戏引擎"]
         }
@@ -80,6 +82,13 @@
       projectHover: "在 ITCH.IO 查看",
       sourceNote: "* 项目资料与图片来自本人 itch.io 公开项目页，点击卡片可查看、试玩或下载。",
       profileLink: "查看 ITCH.IO 主页",
+      portfolioPdf: {
+        kicker: "完整作品集 PDF",
+        title: "PORTFOLIO 2025",
+        description: "18 页完整作品集，收录 3D 场景与角色建模、UV 与材质、骨骼绑定、桌游系统和角色概念设计。",
+        view: "在线浏览",
+        download: "下载 PDF"
+      },
       archiveLabel: "<span>05</span> 更多项目 / 完整列表",
       archiveCount: "全部作品 08 / 08",
       archiveMeta: ["UE5 · 动作角色扮演", "UE4 · 动作原型", "全球游戏创作大赛 · 解谜", "全球游戏创作大赛 2022 · 2D 平台", "3D 美术 · 增强现实 · 界面"],
@@ -129,7 +138,7 @@
       stats: ["Game Reference Samples", "Published Game Projects", "Design & 3D Tools", "48-hour Game Jam Delivery"],
       statHint: "CLICK TO VIEW ↗",
       statDetails: [
-        { title: "Turning play into design research", text: "I continuously play and study puzzle, platform-action, role-playing, management, tabletop and interactive-narrative games, building a library of more than 300 references. I record level pacing, feedback, narrative clues and visual language, then bring those observations into my own mechanics and prototypes." },
+        { title: "Turning play into design research", text: "I continuously play and study puzzle, platform-action, role-playing, management, tabletop and interactive-narrative games, with more than 300 titles played. I record level pacing, feedback, narrative clues and visual language, then bring those observations into my own mechanics and prototypes." },
         { title: "From solo prototypes to team projects", text: "I have published seven game projects on itch.io: MINE, OH!, Fishing, AI Battle Demo 2.0, AI Battle Demo, GIE-GIE-GIE and RIFTCROSSER. Together they span escape-room puzzles, platform building, fishing interactions, action combat and collaborative Game Jam development." },
         { title: "From concept to real-time presentation", text: "My daily toolkit includes Maya, Substance Painter, ZBrush, Unity, Unreal Engine 4/5, Photoshop, Illustrator, After Effects, Premiere Pro and Figma. I can independently move through concept design, modelling, UVs, materials, rigging, animation, UI and real-time engine integration." },
         { title: "Building a playable version in 48 hours", text: "During Global Game Jam, I work through theme analysis, gameplay decisions, team roles, art production, level integration and testing within 48 hours. RIFTCROSSER became a 2D platformer built around dual-hand controls and scene switching; for GIE-GIE-GIE, I led the visual and art direction across two puzzle types and three timed levels." }
@@ -161,6 +170,7 @@
           school: "Goldsmiths, University of London",
           degree: "MA GAME DESIGN & ART",
           researchLabel: "RESEARCH DIRECTION",
+          courseLabel: "COURSE CONTENT",
           direction: "Focused on game design and art, exploring visual development, interaction systems, 3D content and immersive experiences in real-time engines.",
           topics: ["Game Design & Analysis", "Visual Game Development", "3D Modelling & Animation", "Augmented Reality", "UE4 Audio Experience", "UE5 Game Development"]
         },
@@ -170,6 +180,7 @@
           school: "Beijing Forest University",
           degree: "BA DIGITAL MEDIA ART",
           researchLabel: "RESEARCH DIRECTION",
+          courseLabel: "COURSE CONTENT",
           direction: "Built a visual and interaction foundation in digital media art, spanning user experience, game design, motion graphics and front-end technologies.",
           topics: ["User Experience Design", "Interaction Design", "Game Design & Art", "Front-end Development", "Motion Graphics", "Interactive Books & Game Engines"]
         }
@@ -187,6 +198,13 @@
       projectHover: "VIEW ON ITCH.IO",
       sourceNote: "* Project information and images come from my public itch.io pages. Open a card to view, play or download.",
       profileLink: "VIEW ITCH.IO PROFILE",
+      portfolioPdf: {
+        kicker: "FULL PORTFOLIO PDF",
+        title: "PORTFOLIO 2025",
+        description: "An 18-page portfolio spanning 3D environment and character modelling, UVs and texturing, rigging, tabletop systems and character concept design.",
+        view: "VIEW ONLINE",
+        download: "DOWNLOAD PDF"
+      },
       archiveLabel: "<span>05</span> MORE PROJECTS / FULL LIST",
       archiveCount: "ALL WORK 08 / 08",
       archiveMeta: ["UE5 · ACTION RPG", "UE4 · ACTION PROTOTYPE", "GLOBAL GAME JAM · PUZZLE", "GGJ 2022 · 2D PLATFORMER", "3D ART · AR · UI"],

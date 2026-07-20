@@ -5430,3 +5430,172 @@ body.has-stats-dialog { overflow: hidden; }
   .stats-dialog,
   .stats-dialog-panel { transition: none; }
 }
+
+/* V18 — bounded portrait, course labels and embedded portfolio PDF */
+.about-grid {
+  grid-template-columns: clamp(320px, 26vw, 420px) minmax(0, 1fr);
+  align-items: start;
+}
+
+.portrait-frame {
+  width: 100%;
+  max-width: 420px;
+  justify-self: start;
+  align-self: start;
+}
+
+.course-content-label {
+  margin: 0 0 12px;
+  color: var(--mine-pink);
+  font: 900 10px/1.2 "Courier New", monospace;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.portfolio-pdf-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(280px, .9fr) minmax(0, 1.1fr);
+  gap: clamp(28px, 5vw, 70px);
+  align-items: center;
+  margin-top: 86px;
+  padding: clamp(18px, 3vw, 36px);
+  border: 3px solid var(--mine-blue);
+  border-radius: 18px 10px 22px 12px;
+  background: #fff0ce;
+  box-shadow: 8px 9px 0 rgba(42, 91, 117, .9);
+  transform: rotate(-.25deg);
+}
+
+.portfolio-pdf-preview {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border: 3px solid var(--mine-blue);
+  border-radius: 10px 7px 13px 8px;
+  background: var(--mine-blue);
+  box-shadow: 5px 6px 0 var(--mine-pink);
+}
+
+.portfolio-pdf-preview img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 992 / 405;
+  object-fit: cover;
+  transition: transform .3s ease, filter .3s ease;
+}
+
+.portfolio-pdf-preview > span {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  padding: 7px 9px;
+  border: 2px solid var(--mine-blue);
+  border-radius: 999px;
+  color: var(--mine-blue);
+  background: #fff8dd;
+  font: 900 9px/1 "Courier New", monospace;
+  letter-spacing: .08em;
+}
+
+.portfolio-pdf-preview:hover img,
+.portfolio-pdf-preview:focus-visible img {
+  filter: saturate(1.12);
+  transform: scale(1.025);
+}
+
+.portfolio-pdf-copy { min-width: 0; }
+
+.portfolio-pdf-kicker {
+  margin: 0 0 14px;
+  color: var(--mine-pink);
+  font: 900 11px/1.2 "Courier New", monospace;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.portfolio-pdf-copy h3 {
+  margin: 0;
+  color: var(--mine-blue);
+  font: 900 clamp(34px, 4.2vw, 68px)/.94 "Arial Black", sans-serif;
+  letter-spacing: -.045em;
+}
+
+.portfolio-pdf-copy > p:not(.portfolio-pdf-kicker) {
+  max-width: 620px;
+  margin: 22px 0 26px;
+  color: #365f76;
+  font-size: 14px;
+  font-weight: 650;
+  line-height: 1.85;
+}
+
+.portfolio-pdf-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 11px;
+}
+
+.portfolio-pdf-actions a {
+  display: inline-flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 132px;
+  padding: 12px 15px;
+  border: 2px solid var(--mine-blue);
+  border-radius: 999px;
+  color: var(--mine-blue);
+  background: #fff8dd;
+  box-shadow: 3px 3px 0 var(--mine-blue);
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.portfolio-pdf-actions a:first-child {
+  color: #fff8dd;
+  background: var(--mine-pink);
+}
+
+.portfolio-pdf-actions a:hover,
+.portfolio-pdf-actions a:focus-visible {
+  transform: translate(-1px, -2px);
+  box-shadow: 5px 5px 0 var(--mine-blue);
+}
+
+@media (min-width: 1500px) {
+  .about-grid { grid-template-columns: 420px minmax(0, 1fr); }
+  .portrait-frame { width: 420px; }
+}
+
+@media (max-width: 760px) {
+  .about-grid {
+    grid-template-columns: minmax(118px, .72fr) minmax(0, 1.28fr);
+    gap: 12px;
+    align-items: start;
+  }
+
+  .portrait-frame {
+    width: 100%;
+    max-width: 180px;
+    aspect-ratio: .76;
+    justify-self: start;
+  }
+
+  .about-copy { padding: 14px 11px 16px; }
+  .about-lead { font-size: clamp(17px, 4.8vw, 22px); line-height: 1.08; }
+  .about-copy > p:not(.about-lead) { font-size: 10px; line-height: 1.65; }
+  .about-contact { margin-top: 18px; gap: 8px; }
+  .about-contact a { font-size: 8px; overflow-wrap: anywhere; }
+
+  .portfolio-pdf-card {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    margin-top: 60px;
+    padding: 16px 16px 22px;
+    box-shadow: 5px 6px 0 rgba(42, 91, 117, .9);
+  }
+
+  .portfolio-pdf-copy h3 { font-size: clamp(34px, 12vw, 52px); }
+  .portfolio-pdf-copy > p:not(.portfolio-pdf-kicker) { margin: 17px 0 22px; font-size: 12px; }
+}
