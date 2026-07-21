@@ -5717,3 +5717,67 @@ body.has-stats-dialog { overflow: hidden; }
   .strength-portfolio-copy > strong { font-size: 23px; }
   .strength-card .strength-portfolio-copy > p { font-size: 9px; }
 }
+
+/* V21 — hero layer order and expertise navigation */
+.hero-cover-stack {
+  z-index: 2;
+}
+
+.hero-scribbles {
+  z-index: 5;
+}
+
+.hero-content,
+.hero-index {
+  z-index: 6;
+}
+
+.hero-cover-stack .hero-title,
+html[data-language="en"] .hero-cover-stack .hero-title,
+.hero-cover-stack .hero-sketch-card figcaption {
+  z-index: 4;
+}
+
+.strength-top {
+  justify-content: flex-start;
+}
+
+.strength-card-link {
+  position: relative;
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.strength-card-link:focus-visible {
+  outline: 4px solid var(--mine-pink);
+  outline-offset: 7px;
+}
+
+.strength-card-link::after {
+  content: "点击查看项目 ↓";
+  position: absolute;
+  right: 24px;
+  top: 24px;
+  padding: 7px 10px;
+  border: 2px solid var(--mine-blue);
+  border-radius: 999px;
+  color: var(--mine-blue);
+  background: #fff8dd;
+  box-shadow: 2px 3px 0 var(--mine-blue);
+  font: 900 8px/1 "Courier New", monospace;
+  transform: rotate(1deg);
+}
+
+html[data-language="en"] .strength-card-link::after {
+  content: "VIEW PROJECTS ↓";
+}
+
+@media (max-width: 760px) {
+  .strength-card-link::after {
+    right: 18px;
+    top: 18px;
+    padding: 6px 8px;
+    font-size: 7px;
+  }
+}
